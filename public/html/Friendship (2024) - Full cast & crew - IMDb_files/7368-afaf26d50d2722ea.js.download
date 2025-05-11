@@ -1,0 +1,273 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[7368],{24986:function(e,t,a){a.d(t,{d:function(){return _}});var s=a(52322),i=a(2784),r=a(79855),o=a(19596),n=a(87473),d=a(45103),l=a(91842);let c={id:"common_buttons_open",defaultMessage:"Open"},p={id:"common_buttons_close",defaultMessage:"Close"},m={id:"awards_subpage_shared_with",defaultMessage:"Shared with:"},u="shared-awards-entities",f="shared-with-names",g="shared-with-titles",h="awards-meta-expanded",x="award-notes";var b=a(72779),y=a.n(b);let T=e=>{let{awardMetaData:t,sharedWithTitlesRef:a,sharedWithNamesRef:i,awardNotesRef:o,childrenExpanded:n}=e,{awardNotes:l,sharedNamesAwardsString:c,sharedTitlesAwardsString:p}=t,b=(0,r.Z)().formatMessage(m),T={};T[h]=n;let I=c||p?(0,s.jsxs)("div",{className:u,children:[c&&(0,s.jsx)(d.HTMLContent,{reactRef:i,className:y()(f,T),html:`${b} ${c}`}),p&&(0,s.jsx)(d.HTMLContent,{reactRef:a,className:y()(g,T),html:`${b} ${p}`})]}):null,E=l?(0,s.jsx)(d.HTMLContent,{reactRef:o,className:y()(x,T),html:l}):null;return I||E?(0,s.jsxs)(C,{children:[E,I]}):null},C=o.default.div.withConfig({componentId:"sc-1d53e105-0"})(["display:flex;flex-direction:column;"]),I=e=>{let{posterProps:t}=e,a=t?.href?.includes("name");return(0,s.jsx)(E,{children:a?(0,s.jsx)("a",{href:t?.href,children:(0,s.jsx)(d.AvatarImage,{imageModel:t?.imageProps?.imageModel?.url?t.imageProps.imageModel:void 0,size:50})}):(0,s.jsx)(d.Poster,{imageProps:{...t?.imageProps,size:"50"},href:t?.href,ariaLabel:t?.imageProps?.imageModel?.caption??"",dynamicWidth:!0})})},E=o.default.div.withConfig({componentId:"sc-4282043c-0"})(["align-self:baseline;display:flex;flex-shrink:0;margin-bottom:",";margin-top:",";margin-right:",";width:50px;"],l.spacing.xxs,l.spacing.xxs,l.spacing.xs),_=e=>{let{listContent:t,posterProps:a,rowSubTitle:o,rowTitle:d,rowLink:l,subListContent:m,awardMetaData:u,hidePoster:f}=e,g=(0,r.Z)(),h=g.formatMessage(c),x=g.formatMessage(p),b=(0,i.useRef)(null),y=(0,i.useRef)(null),C=(0,i.useRef)(null),E=(0,n.useIsExpandable)(b,"width"),_=(0,n.useIsExpandable)(y,"width"),S=(0,n.useIsExpandable)(C,"width"),[L,j]=(0,i.useState)(!1);return(0,s.jsx)(w,{"data-testid":"list-item",childrenExpanded:L,preElement:f?null:(0,s.jsx)(I,{posterProps:a}),subTextList:m??[],textList:t??[],title:d??"",titleSubText:` ${o}`,titleLink:l,wrapTextList:!0,wrapSubTextList:!0,children:u&&(0,s.jsx)(v,{ariaLabelOpen:h,ariaLabelClose:x,isExpandable:()=>E||_||S,onExpand:()=>j(!0),onCollapse:()=>j(!1),children:(0,s.jsx)(T,{awardMetaData:u,sharedWithTitlesRef:b,sharedWithNamesRef:y,awardNotesRef:C,childrenExpanded:L})})})},v=(0,o.default)(d.ExpandableSection).withConfig({componentId:"sc-f7e0e299-0"})(["margin:"," 1px 1px 1px;"],l.spacing.xs),w=(0,o.default)(d.MetaDataListSummaryItem).withConfig({componentId:"sc-f7e0e299-1"})([".awardCategoryName{",";}."," > div{display:flex;flex-wrap:nowrap;}."," > div,."," > div,."," > div,."," > div{",";",";margin-right:",";overflow:hidden;text-overflow:ellipsis;white-space:nowrap;height:auto;}& ."," > div{white-space:normal;height:fit-content;}.","."," > div{flex-wrap:wrap;}"],(0,l.setPropertyToColorVar)("color","ipt-on-base-textPrimary-color"),u,x,u,f,g,(0,l.setPropertyToColorVar)("color","ipt-on-base-textSecondary-color"),(0,l.setTypographyType)("bodySmall"),l.spacing.xs,h,u,h)},11202:function(e,t,a){var s,i;a.d(t,{EA:function(){return s},b_:function(){return r}});let r=50;(i=s||(s={}))[i.ListItem=0]="ListItem",i[i.AwardListItem=1]="AwardListItem",i[i.NameCreditsListItem=2]="NameCreditsListItem",i[i.ListQuestionAnswerItem=3]="ListQuestionAnswerItem",i[i.ListSummaryItem=4]="ListSummaryItem"},39093:function(e,t,a){a.d(t,{u5:function(){return X},Ou:function(){return W}});var s,i,r,o,n=a(52322),d=a(72779),l=a.n(d),c=a(2784),p=a(79855),m=a(19596),u=a(45103),f=a(91842),g=a(24090),h=a(85767),x=a(58605),b=a(20492),y=a(7293);let T=(e,t,a)=>{let s=a??e.length;return t===y.Ue.AKAs&&(s+=1),s};var C=a(11202),I=a(24986);let E=e=>{let{listContent:t,...a}=e;return(0,n.jsx)(I.d,{listContent:t,...a})};var _=a(45455),v=a.n(_),w=a(48574),S=a(27261),L=a(51442),j=a(72814);let M=e=>{let t,a,{id:s,className:i,display:r,rowTitle:o,rowLink:d,rowLinkType:l,htmlContent:p,listContent:m,expandLimit:f,stackedListItem:g,overflowTextProps:h,refTagSuffix:x=j.Cd.EMPTY,photo:b,photoLink:y}=e,T=(0,S.z7)(),[C,I]=(0,c.useState)(!1),E=(0,w.wL)("ListItem");if(v()(p)&&v()(m)&&!o)return null;l&&d&&"external"===l&&(t=()=>((0,L.zG)(d).then(e=>{T({refMarkerSuffix:x,pageAction:e,id:s})}).catch(e=>{E.error("failed to resolve domainBasedPageAction for external URL",e)}),!0));let _={id:s,display:r,className:i,stackedListItem:g,overflowTextProps:h,labelTitle:o||void 0,labelLink:d,labelLinkType:l,labelLinkAriaLabel:d?o??void 0:void 0,listContent:m??void 0,onClick:t};return f&&m&&m.length>f?(0,n.jsx)(u.ExpandableMetaDataListItem,{..._,expanded:C,onListItemClick:()=>I(!C),"data-testid":"expandable-list-item"},s):(b&&(a=(0,n.jsx)(u.Photo,{href:y,imageProps:{size:"xl",imageModel:b}})),(0,n.jsxs)(u.MetaDataListItem,{..._,display:g?"stacked":r,"data-testid":"list-item",children:[(0,n.jsx)(A,{html:p??""}),a]},s))},A=(0,m.default)(u.HTMLContent).withConfig({componentId:"sc-751b889a-0"})(["display:block;"]);var P=a(78538),N=a(56584),$=a(29639),R=a(25436),O=a(98046),k=a(44381);(s=r||(r={})).Answer="qaitem-feature-answer",s.Question="qaitem-feature-question";let D=e=>{let{id:t,question:a,answer:s,expandedByDefault:i,isEditable:r=!0}=e,[o,d]=(0,c.useState)(void 0),{pageType:l,subPageType:m,pageConst:u}=(0,x.y)(),f=(0,p.Z)(),{getContributionProps:g}=(0,P.Yp)(),h=g({operation:$.k.Edit,subjectId:u,itemId:t,itemType:R.SubPageType.FAQ}),{makeRefMarker:b,value:y}=(0,j.Lz)();return((0,c.useEffect)(()=>{d(i?t:void 0)},[i]),a||s)?(0,n.jsx)(q,{activeItemId:o,items:[{id:t,title:a??"",children:(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(B,{html:s??f.formatMessage({id:"feature_faq_noAnswer",defaultMessage:"No one has answered this question yet."})}),r&&(h?(0,n.jsx)(N.P,{...h,label:f.formatMessage({id:"common_buttons_edit",defaultMessage:"Edit"})}):(0,n.jsx)(k.ZP,{component:(0,n.jsx)(Y,{href:`https://contribute.imdb.com/${m}/${u}/${t}/edit/?ref_${b([j.Cd.QUESTION,j.Cd.EDIT])}`,preIcon:"edit",onColor:"textSecondary",width:"half-padding",children:f.formatMessage({id:"common_buttons_edit",defaultMessage:"Edit"})})}))]}),labelClassName:"qaitem-feature-question",contentClassName:"qaitem-feature-answer",indentLevel:"full",onStateChange:()=>{(0,S.ar)({type:l,subType:m,id:u},"faq-item-expand",O.qB.ACTION_ONLY,y),d(t)},onToggleOff:()=>{(0,S.ar)({type:l,subType:m,id:u},"faq-item-collapse",O.qB.ACTION_ONLY,y),d(void 0)}}],dividers:"bottom",bgContext:"pageSection"},t):null},q=(0,m.default)(u.Accordion).withConfig({componentId:"sc-2364f533-0"})(["","{background:none;}.","{height:auto;span{",";overflow:visible;padding:"," 0;text-overflow:unset;white-space:break-spaces;}}.","{padding:0;}"],f.mediaQueries.breakpoints.below.l,"qaitem-feature-question",(0,f.setTypographyType)("subtitle"),f.spacing.s,"qaitem-feature-answer"),Y=(0,m.default)(u.TextButton).withConfig({componentId:"sc-2364f533-1"})(["margin-bottom:",";"],f.spacing.s),B=(0,m.default)(u.HTMLContent).withConfig({componentId:"sc-2364f533-2"})(["margin-bottom:",";"],f.spacing.s);var V=a(90367);(i=o||(o={})).Accordion="accordion-id",i.Category="category-id",i.Item="item-id",i.ItemHtml="item-html",i.SummaryItem="list-summary-item",i.VotingComponent="list-item-voting-component";let F=e=>{let{id:t,rowTitle:a,rowLink:s,userVotingProps:i}=e;return a?i?(0,n.jsx)(Q,{ariaLabel:a,"data-testid":o.SummaryItem,title:a??"",titleLink:s,postElement:(0,n.jsx)(V.ZP,{className:"list-item-voting-component",...i})},t):(0,n.jsx)(u.MetaDataListSummaryItem,{ariaLabel:a,"data-testid":o.SummaryItem,title:a??"",titleLink:s},t):null},Q=(0,m.default)(u.MetaDataListSummaryItem).withConfig({componentId:"sc-695a0eb2-0"})(["","{display:flex;flex-direction:column;align-items:flex-start;.list-item-voting-component{margin-left:-",";}}"],f.mediaQueries.breakpoints.below.m,f.spacing.s);var Z=a(28555);let X=e=>{let{items:t,listItemType:a,total:s,categoryId:i,spoilers:r,pagination:o,endCursor:d,itemsExpanded:m,splitIndex:u,subSectionTitle:f,listClassName:y}=e,{pageConst:I}=(0,x.y)(),_=(0,p.Z)(),[v,w]=(0,c.useState)(t??[]),[S,L]=(0,c.useState)(d);(0,c.useEffect)(()=>{t&&w(t)},[t]),(0,c.useEffect)(()=>{d&&L(d)},[d]);let j=T(v,i,s),{context:A}=(0,h.B)(),P=(s&&j-v.length||0)>0&&!!o;if(!v.length)return null;let N=v,$=[];void 0!==u&&u>=0&&(N=v.slice(0,u+1),$=v.slice(u+1));let R=e=>e.map((e,t)=>{let s=(()=>{switch(a){case C.EA.AwardListItem:return E;case C.EA.NameCreditsListItem:return Z.I;case C.EA.ListQuestionAnswerItem:return D;case C.EA.ListSummaryItem:return F;default:return M}})();return(0,n.jsx)(s,{...e,expandedByDefault:m},`${e.id}-${t}`)}),O=P&&o?.query&&(0,n.jsx)(g.ZP,{categoryId:i,query:o.query,queryVariables:{filter:o?.getCategoryFilters?o?.getCategoryFilters({categoryId:i,spoilers:r}):void 0,const:I,first:C.b_,after:S,originalTitleText:!!A.sidecar?.localizationResponse.isOriginalTitlePreferenceSet,queryParams:o.queryParams,...o.queryVariables},pathToPageInfo:o.pathToPageInfo,total:j,fetched:v.length,pageSize:C.b_,onDataReceived:e=>{let{items:t,endCursor:a}=o?.transform(e,_,v.length)??{items:[],endCursor:void 0};t&&w([...v,...t]),S&&L(a)},paginationType:o?.paginationType}),k=a===C.EA.NameCreditsListItem?"none":P?"after":"between";return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(b.r,{"data-testid":`sub-section${i?`-${i}`:""}${r?"--spoilers":""}`,children:(0,n.jsxs)(W,{dividers:k,className:l()([{"meta-data-award-list":a===C.EA.AwardListItem,"meta-data-list-full":!P},y]),children:[R(N),!$.length&&O]})}),$.length>0&&(0,n.jsxs)(n.Fragment,{children:[f&&(0,n.jsxs)(U,{children:[" ",f," "]}),(0,n.jsx)(H,{"data-testid":`second-sub-section${i?`-${i}`:""}${r?"--spoilers":""}`,children:(0,n.jsxs)(W,{dividers:k,className:l()([{"meta-data-award-list":a===C.EA.AwardListItem,"meta-data-list-full":!P},y]),children:[R($),O]})})]})]})},W=(0,m.default)(u.MetaDataList).withConfig({componentId:"sc-5e41bcfa-0"})(["","{li:first-child{padding-top:0;}}","{padding:0 "," 0 ",";border:1px solid ",";"," &.meta-data-award-list{padding-top:",";&.meta-data-list-full{padding-bottom:",";}}}"],f.mediaQueries.breakpoints.below.m,f.mediaQueries.breakpoints.above.l,f.spacing.s,f.spacing.m,(0,f.getColorVar)("ipt-base-border-color"),(0,f.setPropertyToShapeVar)("border-radius","ipt-cornerRadius"),f.spacing.s,f.spacing.s),H=(0,m.default)(b.r).withConfig({componentId:"sc-5e41bcfa-1"})(["padding-top:",";"],f.spacing.l),U=m.default.div.withConfig({componentId:"sc-5e41bcfa-2"})([""," padding:"," "," 0;"],(0,f.setTypographyType)("subtitle"),f.spacing.l,(0,f.getSpacingVar)("ipt-pageMargin"))},28555:function(e,t,a){a.d(t,{I:function(){return _}});var s=a(52322),i=a(72779),r=a.n(i),o=a(2784),n=a(79855),d=a(19596),l=a(45103),c=a(91842),p=a(14856),m=a(58605),u=a(33274),f=a(72814),g=a(96143),h=a(40214),x=a(60220),b=a(98046),y=a(47761),T=a(2061),C=a(53703);function I(e){let{titleId:t,nameId:a,headerProps:i,episodeCount:r,tenureText:d,jobCategory:c,seasonOrYearEpisodeData:p,releaseFilter:m,episodesCountDisplayFormat:u="long",renderButton:I,fetchMissingDataOnClickInsteadOfMount:E}=e,_=(0,n.Z)(),v=(0,f.Lz)().value,[w,S]=(0,o.useState)(!1),[L,j]=(0,o.useState)(p),[M,A]=(0,o.useState)(!1),[P,N]=(0,o.useState)(void 0),$=(0,h.q)("tp-prmpt-open",b.qB.POP_UP,`${v}_eps_cdt_btm_sheet`),[{data:R,error:O,fetching:k}]=(0,x.E)({query:T.M_,variables:{nameId:a,titleId:t,jobCategoryId:c.id},context:{serverSideCacheable:!0,personalized:!1},pause:E?!M:!!L});(0,o.useEffect)(()=>{if(R){let e=R.name?.credits?.edges?.[0]?.node;N({episodeCount:e?.episodeCredits?.total,tenureText:(0,g.ZO)(e?.episodeCredits?.yearRange)}),j((0,C.f)(e))}else O&&j({firstSeasonOrYear:"",seasonGrouping:"none"})},[R,O]),(0,o.useEffect)(()=>{L&&M&&E&&S(!0)},[L,M,E]);let D=()=>{!L&&E?A(!0):S(!0),$()},q=(0,g.zg)(r,u,_);return(0,s.jsxs)(s.Fragment,{children:[I?I(D,k):(0,s.jsxs)(s.Fragment,{children:[(0,s.jsx)(l.TextLink,{text:q,onClick:D}),d&&` • ${d}`]}),L&&(0,s.jsx)(y.ZP,{titleId:t,nameId:a,isOpen:w,headerProps:i,onCloseSelected:()=>{S(!1)},episodeCount:P?.episodeCount??r,tenureText:P?.tenureText??d,jobCategory:c,seasonOrYearEpisodeData:L,releaseFilter:m,showCompareLink:!0})]})}let E={WRITER_FAMILY_FIRST_ITEM:"name-credits--writer-family-fist-item",TITLE_TEXT:"name-credits--title-text",TITLE_TEXT_SMALL:"name-credits--title-text-small",TITLE_TEXT_BIG:"name-credits--title-text-big",AVATAR:"name-credits--avatar",CREW_CONTENT:"name-credits--crew-content",CREW_METADATA:"name-credits--crew-metadata"},_=e=>{let{id:t,isSeries:a,isCast:i,rowTitle:o="",imageProps:d,characters:c,attributes:g,episodicCreditData:h,refTagSuffix:x=f.Cd.EMPTY,className:b}=e,y=(0,n.Z)(),{pageConst:T=""}=(0,m.y)(),{nameMainLinkBuilder:C,titleCharacterLinkBuilder:_}=(0,u.WO)(),N=C({nconst:t,refSuffix:x}),$=_({nconst:t,tconst:T,refSuffix:x}),R=a&&c?.length&&c?.length>2?[...c.slice(0,2),"..."]:c;return o&&T?(0,s.jsx)(v,{"data-testid":"name-credits-list-item",className:b,children:(0,s.jsxs)(L,{className:r()({[E.CREW_CONTENT]:!i}),children:[(0,s.jsxs)(M,{children:[i&&(0,s.jsx)(S,{children:(0,s.jsx)(l.Avatar,{className:E.AVATAR,ariaLabel:y.formatMessage(p.F.GO_TO,{target:o}),href:N,imageProps:d,dynamicWidth:!0})}),(0,s.jsx)(l.TextLink,{text:o,href:N,className:r()(E.TITLE_TEXT,E.TITLE_TEXT_BIG)})]}),(0,s.jsxs)(j,{className:r()({[E.CREW_METADATA]:!i}),children:[(0,s.jsx)(l.TextLink,{text:o,href:N,className:r()(E.TITLE_TEXT,E.TITLE_TEXT_SMALL)}),(R?.length||g)&&(0,s.jsxs)(P,{children:[R?.length&&R.map((e,t)=>(0,s.jsxs)(A,{children:[0!==t&&(0,s.jsx)("span",{children:"/"}),(0,s.jsx)(l.TextLink,{text:e,href:$,inheritColor:!0})]},t)),g&&(0,s.jsx)("span",{children:g})]}),h&&(0,s.jsx)(w,{children:(0,s.jsx)(I,{titleId:T,nameId:t,headerProps:{type:"avatar",imageModel:d?.imageModel,title:o||"",ariaLabel:o||""},episodeCount:h.episodeCount,tenureText:h.tenureText,jobCategory:h.jobCategory,fetchMissingDataOnClickInsteadOfMount:!0})})]})]})}):null},v=(0,d.default)(l.MetaDataListSummaryItem).withConfig({componentId:"sc-4b344583-0"})(["padding:0;&.",":not(:first-child){padding-top:",";border-top-width:1px;border-top-style:solid;border-color:",";}.","{","{align-items:start;}}.","{","{align-items:start;}}"],E.WRITER_FAMILY_FIRST_ITEM,c.spacing.xs,(0,c.getColorVar)("ipt-base-border-color"),E.CREW_CONTENT,c.mediaQueries.breakpoints.above.m,E.CREW_METADATA,c.mediaQueries.breakpoints.above.m),w=d.default.div.withConfig({componentId:"sc-4b344583-1"})(["",";","{margin-left:auto;flex-shrink:0;}"],(0,c.setTypographyType)("bodySmall"),c.mediaQueries.breakpoints.above.m),S=d.default.div.withConfig({componentId:"sc-4b344583-2"})(["min-width:3.5rem;margin-right:",";.","{height:3.5rem;width:3.5rem;}","{margin-top:",";}","{min-width:2.25rem;.","{height:2.25rem;width:2.25rem;}}"],c.spacing.xs,E.AVATAR,c.mediaQueries.breakpoints.above.s,c.spacing.xxs,c.mediaQueries.breakpoints.above.m,E.AVATAR),L=d.default.div.withConfig({componentId:"sc-4b344583-3"})(["align-items:center;display:flex;flex-direction:row;width:100%;.","{",";margin:1px;&:hover,&:active,&:focus{outline-offset:0;}}.","{display:none;","{display:inline;}}.","{display:inline;padding:2px 0;","{display:none;padding:0;}}"],E.TITLE_TEXT,(0,c.setTypographyType)("subtitle"),E.TITLE_TEXT_BIG,c.mediaQueries.breakpoints.above.m,E.TITLE_TEXT_SMALL,c.mediaQueries.breakpoints.above.m),j=d.default.div.withConfig({componentId:"sc-4b344583-4"})(["display:flex;width:100%;flex-direction:column;justify-items:center;","{flex-direction:row;gap:",";}"],c.mediaQueries.breakpoints.above.m,c.spacing.xs),M=d.default.div.withConfig({componentId:"sc-4b344583-5"})(["display:flex;","{padding-right:",";align-items:center;width:35%;}"],c.mediaQueries.breakpoints.above.m,c.spacing.s),A=d.default.div.withConfig({componentId:"sc-4b344583-6"})(["display:inline;padding-right:",";span{padding-right:",";}"],c.spacing.xxs,c.spacing.xxs),P=d.default.div.withConfig({componentId:"sc-4b344583-7"})(["",";",";padding:2px 0;","{padding:0;}"],(0,c.setTypographyType)("bodySmall"),(0,c.setPropertyToColorVar)("color","ipt-on-base-textPrimary-color"),c.mediaQueries.breakpoints.above.m)},2061:function(e,t,a){a.d(t,{Lr:function(){return c},M_:function(){return p},_B:function(){return r},xn:function(){return d}});var s=a(30382),i=a.n(s);let r={id:"common_ariaLabel_closePrompt",defaultMessage:"Close Prompt"},o=i()`
+    fragment EpisodeBottomSheetTitleMetadata on Title {
+        id
+        releaseYear {
+            year
+        }
+        titleText {
+            text
+        }
+        originalTitleText {
+            text
+        }
+        titleType {
+            canHaveEpisodes
+        }
+        series {
+            displayableEpisodeNumber {
+                displayableSeason {
+                    text
+                }
+                episodeNumber {
+                    text
+                }
+            }
+        }
+    }
+`,n=i()`
+    fragment CastEpisodeBottomSheetNav on EpisodeCastConnection {
+        displayableYears(first: 100) {
+            total
+            edges {
+                node {
+                    year
+                    displayableProperty {
+                        value {
+                            plainText
+                        }
+                    }
+                }
+            }
+        }
+        displayableSeasons(first: 100) {
+            total
+            edges {
+                node {
+                    season
+                    displayableProperty {
+                        value {
+                            plainText
+                        }
+                    }
+                }
+            }
+        }
+    }
+`,d=function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"";return i()`
+    query EpisodeBottomSheetCast(
+        $titleId: ID!,
+        $nameId: ID!,
+        $after: ID,
+        $episodeCreditsFilter: EpisodeCreditsFilter
+    ) {
+        name(id: $nameId) {
+            credits(
+                first: 1
+                filter: { 
+                    titles: [$titleId],
+                    categories: ["${e}"],
+                    projectStatus: ["${t}"]
+                }
+            ) {
+                edges {
+                    node {
+                        ... on Cast {
+                            characters {
+                                name
+                            }
+                            episodeCredits(
+                                first: 50, 
+                                after: $after,
+                                filter: $episodeCreditsFilter
+                                sort: {by: RELEASE_DATE order: ASC}
+                            ) {
+                                pageInfo {
+                                    endCursor
+                                    hasNextPage
+                                }
+                                edges {
+                                    node {
+                                        attributes {
+                                            text
+                                        }
+                                        ... on Cast {
+                                            title {
+                                                ...EpisodeBottomSheetTitleMetadata
+                                            }
+                                            characters {
+                                                name
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            nav: episodeCredits(
+                                first: 0
+                            ) {
+                                ...CastEpisodeBottomSheetNav
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ${o}
+    ${n}
+`},l=i()`
+    fragment CrewEpisodeBottomSheetNav on EpisodeCrewConnection {
+        displayableYears(first: 100) {
+            total
+            edges {
+                node {
+                    year
+                    displayableProperty {
+                        value {
+                            plainText
+                        }
+                    }
+                }
+            }
+        }
+        displayableSeasons(first: 100) {
+            total
+            edges {
+                node {
+                    season
+                    displayableProperty {
+                        value {
+                            plainText
+                        }
+                    }
+                }
+            }
+        }
+    }
+`,c=function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"";return i()`
+    query EpisodeBottomSheetCrew(
+        $titleId: ID!,
+        $nameId: ID!,
+        $after: ID,
+        $episodeCreditsFilter: EpisodeCreditsFilter
+    ) {
+        name(id: $nameId) {
+            credits(
+                first: 1, 
+                filter: {
+                    titles: [$titleId],
+                    categories: ["${e}"],
+                    projectStatus: ["${t}"]
+                }
+            ) {
+                edges {
+                    node {
+                        ... on Crew {
+                            episodeCredits(
+                                first: 50, 
+                                after: $after,
+                                filter: $episodeCreditsFilter
+                                sort: {by: RELEASE_DATE order: ASC}
+                            ) {
+                                pageInfo {
+                                    endCursor
+                                    hasNextPage
+                                }
+                                edges {
+                                    node {
+                                        attributes {
+                                            text
+                                        }
+                                        ... on Crew {
+                                            jobs {
+                                                id
+                                                text
+                                            }
+                                            title {
+                                                ...EpisodeBottomSheetTitleMetadata
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            nav: episodeCredits(
+                                first: 0
+                            ) {
+                                ...CrewEpisodeBottomSheetNav
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ${o}
+    ${l}
+`},p=i()`
+    query DisplayableSeasonAndYear(
+        $titleId: ID!
+        $nameId: ID!
+        $jobCategoryId: ID!
+    ) {
+        name(id: $nameId) {
+            credits(
+                filter: { titles: [$titleId], categories: [$jobCategoryId] }
+                first: 1
+            ) {
+                edges {
+                    node {
+                        ... on Cast {
+                            episodeCredits(first: 0) {
+                                total
+                                yearRange {
+                                    endYear
+                                    year
+                                }
+                                displayableSeasons(first: 1) {
+                                    total
+                                    edges {
+                                        node {
+                                            season
+                                        }
+                                    }
+                                }
+                                displayableYears(first: 1) {
+                                    total
+                                    edges {
+                                        node {
+                                            year
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        ... on Crew {
+                            episodeCredits(first: 0) {
+                                total
+                                yearRange {
+                                    endYear
+                                    year
+                                }
+                                displayableSeasons(first: 1) {
+                                    total
+                                    edges {
+                                        node {
+                                            season
+                                        }
+                                    }
+                                }
+                                displayableYears(first: 1) {
+                                    total
+                                    edges {
+                                        node {
+                                            year
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+`},47761:function(e,t,a){a.d(t,{ZP:function(){return F}});var s=a(52322),i=a(2784),r=a(79855),o=a(19596),n=a(45103),d=a(91842),l=a(25436),c=a(99493),p=a(34052),m=a(26524),u=a(58605),f=a(60220),g=a(33274),h=a(72814),x=a(36214);let b={CHARACTER_LINK_TEXT:{id:"common_cast_label_seeCharacterPhotosAndQuotes",defaultMessage:"Character photos & quotes"},COMPARE_LINK_TEXT:{id:"common_cast_compareWithOthers",defaultMessage:"Compare with other cast & crew members"}},y=e=>{let{titleId:t,nameId:a,showCharacterLink:i,showCompareLink:o}=e,d=(0,r.Z)(),{titleCharacterLinkBuilder:l,searchTitleLinkBuilder:c}=(0,g.WO)();if(!i&&!o)return null;let p=l({tconst:t,nconst:a,refSuffix:h.Cd.TEXT}),m=c({query:{series:t,role:a},refSuffix:h.Cd.TEXT}),u=[i&&{href:p,text:d.formatMessage(b.CHARACTER_LINK_TEXT)},o&&{href:m,text:d.formatMessage(b.COMPARE_LINK_TEXT)}].filter(Boolean);return(0,s.jsx)(n.MetaDataList,{dividers:"after",children:(0,s.jsx)(T,{listContent:u})})},T=(0,o.default)(n.MetaDataListItem).withConfig({componentId:"sc-ffaad203-0"})(["padding-left:",";"],d.spacing.s);var C=a(27261),I=a(98046);let E=e=>{let{firstYearOrSeason:t,navigationData:a,onSeasonChange:o,seasonGrouping:d}=e,l=(0,r.Z)(),{value:c}=(0,h.Lz)(),{palette:p}=(0,i.useContext)(n.ThemeContext),{pageConst:m,pageType:f,subPageType:g}=(0,u.y)(),x={id:m,subType:g,type:f};if(!a||!o)return null;let b=[],y=a.displayableSeasons?.edges,T=a.displayableYears?.edges;if(y&&y.length>1)y.forEach(e=>{b.push({"data-testid":`season-tab-${e.node.season}`,id:e.node.season,label:_(e.node.season,e.node.displayableProperty.value.plainText??e.node.season)})});else{if(!T||!(T.length>1))return null;T.forEach(e=>{b.push({"data-testid":`year-tab-${e.node.year}`,id:e.node.year,label:_(e.node.year,e.node.displayableProperty.value.plainText??e.node.year)})})}return(0,s.jsxs)(s.Fragment,{children:[(0,s.jsxs)(v,{"data-testid":"episodic-navigation-container",children:["none"!==d&&(0,s.jsx)(w,{"data-testid":"episodic-navigation-label",className:p.baseColor,children:l.formatMessage({id:`episodic_credit_bottomsheet_grouping_${d}`,defaultMessage:"season"===d?"SEASON":"YEAR"})}),(0,s.jsx)(n.Tabs,{defaultValue:t,display:"chip",padding:"s",onChange:(e,t)=>{(0,C.ar)(x,"tab-select",I.qB.ACTION_ONLY,`${c}_eps_nav_tab${t?`_${t+1}`:""}`),o(e)},onNextPage:()=>(0,C.ar)(x,"next-button-click",I.qB.ACTION_ONLY,`${c}_eps_nav`),onPreviousPage:()=>(0,C.ar)(x,"prev-button-click",I.qB.ACTION_ONLY,`${c}_eps_nav`),tabs:b})]}),(0,s.jsx)(n.MenuListDivider,{})]})},_=(e,t)=>"unknown"===e?"?":t,v=o.default.div.withConfig({componentId:"sc-3ed1beaa-0"})(["margin-bottom:",";"],d.spacing.s),w=o.default.div.withConfig({componentId:"sc-3ed1beaa-1"})([""," margin-top:",";margin-bottom:",";margin-left:",";&.base{","}&.baseAlt{","}"],(0,d.setTypographyType)("overline"),d.spacing.xs,d.spacing.xxs,d.spacing.s,(0,d.setPropertyToColorVar)("color","ipt-on-base-textSecondary-color"),(0,d.setPropertyToColorVar)("color","ipt-on-baseAlt-textSecondary-color"));var S=a(72779),L=a.n(S),j=a(40127),M=a(85767),A=a(73354),P=a(13595),N=a(78187),$=a(64101);let R=e=>{let{creditEdges:t,hasMoreResults:a,isCastCredit:o,jobCategoryLabel:d,nameId:c,query:p,queryVariables:m,queryContext:f}=e,x=(0,r.Z)(),{pageConst:b,pageType:y,subPageType:T}=(0,u.y)(),{palette:E}=(0,i.useContext)(n.ThemeContext),{titleMainLinkBuilder:_}=(0,g.WO)(),{value:v}=(0,h.Lz)(),w={id:b,subType:T,type:y},S=(0,M.B)().context,[R,Y]=(0,i.useState)({creditEdges:t,hasMoreResults:a,queryVariables:m});(0,i.useEffect)(()=>{Y({...R,hasMoreResults:a,creditEdges:t,queryVariables:m})},[t,a]);let B=(e,t)=>({className:"episodic-credits-bottomsheet__menu-item",href:_({tconst:e,refSuffix:{t:h.Cd.SEE_MORE,n:t+1}})});return(0,s.jsxs)(s.Fragment,{children:[R.creditEdges.map((e,t)=>{let a=e.node.title,i=(0,N.y)(a.releaseYear,a.titleType?.canHaveEpisodes),r=(0,P._)(a.series?.displayableEpisodeNumber,x.formatMessage),p=(0,$.L)(S,a.originalTitleText?.text,a.titleText?.text),m=e.node?.characters??[],u=e.node?.jobs?.map(e=>e.text)??[];!o&&0===u.length&&d&&u.push(d);let f=e.node?.attributes?.map(e=>e.text)??[],g=(0,A.AP)(f,(e.node?.jobs??[]).map(e=>({label:e.text,id:e.id}))),h=`episodic-credits-bottomsheet-row-${a.id}`,b=!!a.releaseYear?.year&&(0,s.jsx)("span",{className:"series-title-info-year",children:` (${i})`});return(0,s.jsxs)("div",{"data-testid":h,children:[(0,s.jsxs)(D,{...B(a.id,t),children:[(0,s.jsx)(k,{className:E.baseColor,children:r?(0,s.jsxs)(n.InlineList,{showDividers:!0,inline:!0,children:[(0,s.jsx)(n.InlineListItem,{children:r}),(0,s.jsxs)(n.InlineListItem,{children:[p,b]})]}):(0,s.jsxs)(s.Fragment,{children:[p,b]})},`series-title-info-${a.id}`),!!(m||u.length>0)&&(0,s.jsxs)(q,{className:L()(E.baseColor,y===l.PageType.TITLE?"elide-content":"wrap-content"),children:[m?.length>0&&m?.map(e=>e.name)?.join(" \xb7 "),u.length>0&&u.join(", "),g.length>0&&` (${g.join(", ")})`]},`episodic-character-info-${a.id}`)]},`series-ep-${c}-${a.id}`),(0,s.jsx)(n.MenuListDivider,{},`episodic-credits-bottomsheet_credit__divider-${t}`)]},`${h}-${t}`)}),R.creditEdges.length>0&&R.hasMoreResults&&(0,s.jsx)(O,{children:(0,s.jsx)(j.Z,{className:"episodic-see-more-button",query:p,queryVariables:R.queryVariables,queryContext:f,onDataReceived:(e,t)=>{let a=e.name?.credits?.edges[0]?.node?.episodeCredits;Y({...R,creditEdges:[...R.creditEdges,...a?.edges??[]],hasMoreResults:!t})},onError:(e,t)=>Y({...R,queryVariables:{...R.queryVariables,after:t}}),onTrigger:()=>(0,C.ar)(w,"eps-sm",I.qB.ACTION_ONLY,`${v}_sm`),pathToPageInfo:"name.credits.edges[0].node.episodeCredits.pageInfo"})})]})},O=o.default.div.withConfig({componentId:"sc-19e3c1d-0"})(["margin-top:",";margin-left:",";"],d.spacing.xs,d.spacing.m),k=o.default.p.withConfig({componentId:"sc-19e3c1d-1"})([""," overflow:hidden;text-overflow:ellipsis;.series-title-info-year{white-space:pre;}&.base .series-title-info-year{","}&.baseAlt .series-title-info-year{","}"],(0,d.setTypographyType)("body"),(0,d.setPropertyToColorVar)("color","ipt-on-base-textSecondary-color"),(0,d.setPropertyToColorVar)("color","ipt-on-baseAlt-textSecondary-color")),D=(0,o.default)(n.MenuListItem).withConfig({componentId:"sc-19e3c1d-2"})(["height:100%;min-height:",";padding-bottom:",";padding-top:",";"],d.spacing.xxl,d.spacing.xs,d.spacing.xs),q=o.default.span.withConfig({componentId:"sc-19e3c1d-3"})([""," &.wrap-content{white-space:break-spaces;display:block;}&.elide-content{overflow:hidden;text-overflow:ellipsis;}&.base{","}&.baseAlt{","}"],(0,d.setTypographyType)("bodySmall"),(0,d.setPropertyToColorVar)("color","ipt-on-base-textSecondary-color"),(0,d.setPropertyToColorVar)("color","ipt-on-baseAlt-textSecondary-color"));var Y=a(2061),B=a(53703);let V=e=>{let{titleId:t,nameId:a,isOpen:o,headerProps:d,onCloseSelected:b,episodeCount:T,tenureText:C,jobCategory:I,seasonOrYearEpisodeData:_,releaseFilter:v,showCompareLink:w}=e,{pageType:S}=(0,u.y)(),{nameMainLinkBuilder:L,titleMainLinkBuilder:j}=(0,g.WO)(),M=(0,m.ik)(),A=(0,i.useRef)(null),P=(0,r.Z)(),{firstSeasonOrYear:N,seasonGrouping:$}=_??{firstSeasonOrYear:"",seasonGrouping:"none"},[O,k]=(0,i.useState)({currentSeasonOrYear:N,edges:[],issueSeasonOrYearRequest:!0,navigationData:null,pageInfo:void 0,scrollLocation:0,showCharacterLink:!1}),D=I.id,q=p.k.some(e=>e===D),V=q?(0,Y.xn)(D,v):(0,Y.Lr)(D,v),F={after:O.pageInfo?.endCursor??"",nameId:a,titleId:t,episodeCreditsFilter:(0,B.s)($,O.currentSeasonOrYear)},X={serverSideCacheable:!0,personalized:!1},[{data:W,error:H,fetching:U}]=(0,f.E)({query:V,variables:F,context:X,pause:!O.issueSeasonOrYearRequest});(0,i.useEffect)(()=>{if(W){let e=W.name?.credits?.edges[0]?.node?.episodeCredits,t=W.name?.credits?.edges[0]?.node?.nav;k({...O,edges:[...O.edges,...e?.edges??[]],issueSeasonOrYearRequest:!1,navigationData:t,pageInfo:e?.pageInfo,showCharacterLink:q&&!!W.name?.credits?.edges[0]?.node?.characters})}else H&&k({...O,issueSeasonOrYearRequest:!1})},[W,H]);let z=S===l.PageType.NAME?j({tconst:t,refSuffix:h.Cd.POSTER}):L({nconst:a,refSuffix:h.Cd.POSTER}),K=S===l.PageType.NAME?j({tconst:t,refSuffix:h.Cd.TEXT}):L({nconst:a,refSuffix:h.Cd.TEXT}),G=T>0?(0,s.jsxs)(n.InlineList,{showDividers:!0,children:[(0,s.jsx)(n.InlineListItem,{children:P.formatMessage({id:"common_cast_numEpisodes",defaultMessage:"{totalEpisodes, plural, one {{totalEpisodes} episode} other {{totalEpisodes} episodes}}"},{totalEpisodes:T})}),(0,s.jsx)(n.InlineListItem,{children:C})]}):(0,s.jsx)(s.Fragment,{children:C}),J=(0,s.jsx)(n.PromptHeader,{...d,subtitle:G,imageHref:z,titleHref:K});return(0,s.jsxs)(Q,{panelClassName:"episodic-credits-bottomsheet__panel",header:J,isOpen:o,baseColor:M?"base":"baseAlt",onCloseClicked:b,closePromptLabel:P.formatMessage(Y._B),children:[W&&(0,s.jsx)("div",{ref:A,children:(0,s.jsxs)(n.MenuList,{children:[!M&&(0,s.jsx)(y,{titleId:t,nameId:a,showCharacterLink:O.showCharacterLink,showCompareLink:w}),(0,s.jsx)(E,{firstYearOrSeason:N,navigationData:O.navigationData,onSeasonChange:e=>{e!==O.currentSeasonOrYear&&k({...O,currentSeasonOrYear:e,issueSeasonOrYearRequest:!0,edges:[],pageInfo:void 0})},seasonGrouping:$}),(0,s.jsx)(R,{isCastCredit:q,nameId:a,creditEdges:O.edges??[],jobCategoryLabel:I.label,hasMoreResults:O.pageInfo?.hasNextPage??!1,query:V,queryVariables:F,queryContext:X})]})}),U&&(0,s.jsx)(x.ZP,{height:"feature"}),H&&(0,s.jsx)(Z,{children:(0,s.jsx)(c.ZP,{error:H,errorMessage:P.formatMessage({id:"error_common_sorryTryAgain",defaultMessage:"Sorry, there was an error. Please try again."}),name:"EpisodicCreditBottomSheet",canRetry:!0,onClickRetry:()=>{k({...O,issueSeasonOrYearRequest:!0})}})})]})};var F=e=>(0,s.jsx)(h.xm,{value:h.Cd.EPISODE_PROMPT,children:(0,s.jsx)(V,{...e})});let Q=(0,o.default)(n.Prompt).withConfig({componentId:"sc-d4c13b9e-0"})([".episodic-credits-bottomsheet__panel{","{max-width:70%;}","{max-width:716px;}}"],d.mediaQueries.breakpoints.only.m,d.mediaQueries.breakpoints.above.l),Z=o.default.div.withConfig({componentId:"sc-d4c13b9e-1"})([""," background:initial;display:flex;min-height:7rem;justify-content:center;padding:3rem;"],(0,d.setTypographyType)("body"))},53703:function(e,t,a){a.d(t,{f:function(){return r},s:function(){return i}});var s=a(13433);let i=(e,t)=>"year"===e?"unknown"===t?{episodes:{unknownReleaseDate:s.Mt.UnknownOnly}}:{episodes:{releasedOnOrAfter:{day:1,month:1,year:Number(t)},releasedOnOrBefore:{day:31,month:12,year:Number(t)}}}:"season"===e?{episodes:{includeSeasons:[t]}}:{},r=e=>{let t="none",a="";return Number(e?.episodeCredits?.displayableSeasons?.total)>1?(t="season",a=e?.episodeCredits?.displayableSeasons?.edges?.[0]?.node?.season??""):Number(e?.episodeCredits?.displayableYears?.total)>1&&(t="year",a=e?.episodeCredits?.displayableYears?.edges?.[0]?.node?.year??""),{firstSeasonOrYear:a,seasonGrouping:t}}},99493:function(e,t,a){a.d(t,{Kj:function(){return u}});var s=a(52322),i=a(70314),r=a.n(i),o=a(2784),n=a(19596),d=a(45103),l=a(46315),c=a(91842),p=a(28827);let m={PARENT:"retry-error",DEBUG:"retry-error-debug",BUTTON:"retry"},u=e=>{let{className:t,name:a,error:i,errorMessage:n,onClickRetry:c,canRetry:u}=e,h="Prod"===r()().publicRuntimeConfig.stage,x=(0,p.N)({id:"error_common_sorryLoadingPage",defaultMessage:"Sorry, there was an error loading the page."}),b=(0,p.N)({id:"common_buttons_retry",defaultMessage:"Try again"}),y=o.useContext(l.Theme),T=`color-${y.palette.baseColor}`;return(0,s.jsxs)("div",{className:t,"data-testid":m.PARENT,children:[(0,s.jsx)(g,{className:T,children:n??x}),u&&(0,s.jsx)(f,{"data-testid":m.BUTTON,onColor:"textPrimary",onClick:e=>c(e),children:b}),!h&&(0,s.jsxs)("div",{"data-testid":m.DEBUG,children:[(0,s.jsx)(d.SectionTitle,{children:"Error:"}),(0,s.jsx)(g,{className:T,children:`"${a}" failed to load. Reason: "${i?.message}" Check console for errors.`})]})]})},f=(0,n.default)(d.SecondaryButton).withConfig({componentId:"sc-a80bf14c-0"})(["display:block;margin:0 auto;"]),g=(0,n.default)(d.ErrorMessage).withConfig({componentId:"sc-a80bf14c-1"})(["padding-top:5rem;padding-bottom:1.5rem;text-align:center;&.color-base{","}&.color-baseAlt{","}"],(0,c.setPropertyToColorVar)("color","ipt-on-base-textPrimary-color"),(0,c.setPropertyToColorVar)("color","ipt-on-baseAlt-textPrimary-color"));t.ZP=u},96143:function(e,t,a){a.d(t,{zg:function(){return n},ZO:function(){return r},Hh:function(){return o}});var s=a(79855);let i={NUM_EPISODES:{id:"common_cast_numEpisodes",defaultMessage:"{totalEpisodes, plural, one {{totalEpisodes} episode} other {{totalEpisodes} episodes}}"},NUM_EPISODES_SHORT:{id:"common_cast_numEpisodes_short",defaultMessage:"{totalEpisodes, plural, one {{totalEpisodes} ep} other {{totalEpisodes} eps}}"}},r=e=>{let t;return e?.year&&e?.endYear?t=`${e?.year}–${e?.endYear}`:e?.year&&(t=`${e?.year}`),t},o=(e,t)=>n(e,t,(0,s.Z)()),n=(e,t,a)=>{if(0===e||void 0===e)return"";let s="long"===t?i.NUM_EPISODES:i.NUM_EPISODES_SHORT,r="long"===t?"episode":"ep",o=e>1?`${e} ${r}s`:`1 ${r}`;return a.formatMessage({id:s.id,defaultMessage:o},{totalEpisodes:e})}},7293:function(e,t,a){a.d(t,{TY:function(){return o},Ue:function(){return i}});var s,i,r=a(24667);a(51893).l.TITLE_RELEASE_INFO;let o=(0,r.vU)({releaseDate:{id:"title_subpage_releaseInfo_releaseDate",defaultMessage:"Release Date"},title:{id:"title_subpage_releaseInfo_title",defaultMessage:"Release Info"},alsoKnownAs:{id:"title_subpage_releaseInfo_aka",defaultMessage:"Also Known As (AKA)"},akaOriginalTitle:{id:"title_subpage_releaseInfo_aka_originalTitle",defaultMessage:"(original title)"},metaDescription:{id:"common_meta_description",defaultMessage:"Movies, TV, Celebs, and more..."},metaKeywords:{id:"common_title_subpage_meta_keywords",defaultMessage:"Reviews, Showtimes, DVDs, Photos, Message Boards, User Ratings, Synopsis, Trailers, Credits"}});(s=i||(i={})).AKAs="akas",s.Releases="releases"},34052:function(e,t,a){a.d(t,{k:function(){return s}});let s=["actress","actor","archive_footage","self"]},73354:function(e,t,a){a.d(t,{AP:function(){return s},D1:function(){return r},Kb:function(){return i}});let s=(e,t)=>e.filter(e=>!t.some(t=>t.label.toLowerCase()===e.toLowerCase())),i=(e,t)=>e.map(e=>({text:e})).slice(0,t);function r(e,t,a){let s=a?.length?` (${a.join(", ")})`:"",i=`${s}${t?" ...":""}`;return e&&e.length>0?e[e.length-1].subText=i:e=[{text:"",subText:i}],e}},13595:function(e,t,a){a.d(t,{_:function(){return i},r:function(){return r}});let s="unknown",i=(e,t)=>e?r(e.displayableSeason?.text||s,e.episodeNumber?.text||s,t):void 0,r=(e,t,a)=>e.toLowerCase()!==s&&t.toLowerCase()!==s?a({id:"common_season_episode_number",defaultMessage:"S{seasonNumber}.E{episodeNumber}"},{seasonNumber:e,episodeNumber:t}):void 0}}]);

@@ -1,0 +1,406 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[7106],{84915:function(e,t){t.Z=[{quote:"I've got a feeling we're not in Kansas anymore.",character:"Dorothy",title:"The Wizard of Oz (1939)",tconst:"tt0032138"},{quote:"Surely you can't be serious! I am serious. And don't call me Shirley.",character:"Ted Striker & Rumack",title:"Airplane! (1980)",tconst:"tt0080339"},{quote:"What we've got here is... failure to communicate.",character:"Captain",title:"Cool Hand Luke (1967)",tconst:"tt0061512"},{quote:"Dude...",character:"Hurley",title:"Lost (2004) - TV Series",tconst:"tt0411008"},{quote:"Someday we'll find it... the website connection...",character:"Kermit the Frog",title:"The Muppet Movie (1979)",tconst:"tt0079588"},{quote:"Webpages? Where we're going, we don't need webpages.",character:"Dr. Emmett Brown",title:"Back to the Future (1985)",tconst:"tt0088763"},{quote:"It's the one that says 'Page not found'.",character:"Jules Winnfield",title:"Pulp Fiction (1994)",tconst:"tt0110912"},{quote:"What's on the page?!",character:"Detective David Mills",title:"Se7en (1995)",tconst:"tt0114369"},{quote:"Yeah... I'm gonna need you to go ahead and find another page.",character:"Bill Lumbergh",title:"Office Space (1999)",tconst:"tt0151804"},{quote:"Page not found? INCONCEIVABLE.",character:"Vizzini",title:"The Princess Bride (1987)",tconst:"tt0093779"},{quote:"The page did a Peter Pan right off of this website, right here.",character:"Deputy Marshal Samuel Gerard",title:"The Fugitive (1993)",tconst:"tt0106977"},{quote:"There is no page.",character:"Spoon Boy",title:"The Matrix (1999)",tconst:"tt0133093"},{quote:"Dude, where's my webpage?",character:"Jesse Montgomery III",title:"Dude, Where's My Car? (2000)",tconst:"tt0242423"},{quote:"Well, what if there is no webpage? There wasn't one today.",character:"Phil Connors",title:"Groundhog Day (1993)",tconst:"tt0107048"},{quote:"He's off the map! He's off the map!",character:"Stan",title:"Eternal Sunshine of the Spotless Mind (2004)",tconst:"tt0338013"},{quote:"I am Jack's missing page.",character:"The Narrator",title:"Fight Club (1999)",tconst:"tt0137523"},{quote:"Lord! It's a miracle! Webpage up and vanished like a fart in the wind!",character:"Warden Norton",title:"The Shawshank Redemption (1994)",tconst:"tt0111161"},{quote:"Where's the page, Lebowski?  Where's the page?",character:"Blond Thug",title:"The Big Lebowski (1998)",tconst:"tt0118715"},{quote:"Always remember, Frodo, the page is trying to get back to its master. It wants to be found.",character:"Gandalf",title:"The Lord of the Rings: The Fellowship of the Ring (2001)",tconst:"tt0120737"},{quote:"This is not the webpage you're looking for.",character:"Obi-Wan",title:"Star Wars: Episode IV - A New Hope (1977)",tconst:"tt0076759"}]},27106:function(e,t,r){r.d(t,{$:function(){return tg}});var a=r(52322),o=r(2784),n=r(63955),i=r(19596),l=r(45103),d=r(91842),s=r(93261),c=r(8029),u=r(23760);let f=()=>{let e=(0,c.Zl)(),[t,r]=(0,o.useState)(!1),{debugAccordionItems:n}=(0,u.WW)();return e?(0,a.jsxs)(m,{"data-testid":"sdui-debug-bar",fullHeight:t,children:[(0,a.jsxs)(p,{children:[(0,a.jsx)(l.IconButton,{name:t?"clear":"robot",label:"debug",onClick:()=>{r(!t)}}),t&&(0,a.jsx)(h,{children:"Debug"})]}),(0,a.jsxs)(g,{visible:t,children:[(0,a.jsx)(w,{children:(0,a.jsxs)(l.PageBackground,{children:[(0,a.jsx)(s._,{featureId:"SDUI"}),(0,a.jsx)(l.Accordion,{stickyHeaders:!0,dividers:"between",allowMultipleOpen:!0,items:n??[]})]})}),(0,a.jsx)(x,{onClick:()=>{r(!t)}})]})]}):null},p=i.default.div.withConfig({componentId:"sc-ddf5bb2e-0"})(["display:flex;align-items:center;background-color:",";"],(0,d.getColorVarValue)("ipt-on-baseAlt-accent1-color")),h=i.default.div.withConfig({componentId:"sc-ddf5bb2e-1"})(["padding-left:",";",""],d.spacing.xs,(0,d.setTypographyType)("headline6")),m=i.default.div.withConfig({componentId:"sc-ddf5bb2e-2"})(["position:fixed;display:flex;flex-direction:column;inset:",";top:0;z-index:999999;"],e=>e.fullHeight?0:"unset"),g=i.default.div.withConfig({componentId:"sc-ddf5bb2e-3"})(["display:",";overflow-y:auto;height:100%;flex-direction:column;"],e=>e.visible?"flex":"none"),w=i.default.div.withConfig({componentId:"sc-ddf5bb2e-4"})(["box-shadow:-3px 4px 27px -6px rgb(0 0 0 / 60%);"]),x=i.default.div.withConfig({componentId:"sc-ddf5bb2e-5"})(["flex:1;background-color:rgb(0 0 0 / 0%);"]);var b=r(85767),k=r(82578),y=r(11778),I=r(79855),v=r(29266);let C=e=>{let{isOpen:t,children:r,background:o="transparent"}=e;return t?(0,a.jsx)(v.ZP,{disabled:!t,returnFocus:!0,children:(0,a.jsx)(T,{"aria-modal":"true",role:"dialog","data-testid":"ui-workflow-prompt",background:o,children:(0,a.jsx)(l.ListCard,{borderType:"shadow",children:r})})}):null},T=i.default.div.withConfig({componentId:"sc-5c721305-0"})(["align-items:center;background:",";display:flex;inset:0;justify-content:center;position:absolute;z-index:1000;"],e=>{let{background:t}=e;return"solid"===t?(0,d.getColorVarValue)("ipt-base-shade2-bg"):`rgba(${(0,d.getColorVarValue)("ipt-baseAlt-rgb")}, 0.5)`}),j={container:"ui-workflow-error-screen",heading:"ui-workflow-error-screen-heading",description:"ui-workflow-error-screen-description",errorStack:"ui-workflow-error-stack"},E=e=>{let{show:t,error:r}=e,n=(0,I.Z)(),{addOrUpdateItemInDebugBar:i}=(0,u.WW)();(0,o.useEffect)(()=>{i?.({type:"error",id:"ui-workflow-error-screen",value:r})},[r]);let d=n.formatMessage({id:"ui_workflow_error_screen_heading",defaultMessage:"This is unexpected"}),s=n.formatMessage({id:"ui_workflow_error_screen_description",defaultMessage:"We apologize, we’re having issues on our end. Try again later."});return(0,a.jsx)(C,{isOpen:t,background:"solid",children:(0,a.jsxs)(_,{"data-testid":j.container,children:[(0,a.jsxs)(W,{children:[(0,a.jsx)(l.Icon,{name:"sentiment-dissatisfied"}),(0,a.jsx)(U,{"data-testid":j.heading,children:d})]}),(0,a.jsx)(L,{"data-testid":j.description,children:s}),r&&(0,y.isDevNodeEnv)()?(0,a.jsxs)(S,{"data-testid":j.errorStack,children:[(0,a.jsx)("span",{children:r.toString()}),(0,a.jsx)("span",{children:r?.stack})]}):null]})})},_=i.default.div.withConfig({componentId:"sc-6f177271-0"})(["display:flex;flex-direction:column;gap:",";justify-content:center;align-items:center;max-width:18rem;"],d.spacing.m),W=i.default.div.withConfig({componentId:"sc-6f177271-1"})(["align-items:center;display:flex;gap:",";"],d.spacing.xxs),U=i.default.div.withConfig({componentId:"sc-6f177271-2"})(["",""],(0,d.setTypographyType)("headline6")),L=i.default.div.withConfig({componentId:"sc-6f177271-3"})([""," color:",";text-align:center;"],(0,d.setTypographyType)("bodySmall"),(0,d.getColorVarValue)("ipt-on-base-textSecondary-color")),S=i.default.div.withConfig({componentId:"sc-6f177271-4"})(["color:",";overflow-wrap:anywhere;overflow-y:auto;max-height:50vh;display:flex;flex-direction:column;gap:",";"],(0,d.getColorVarValue)("ipt-on-base-accent3-color"),d.spacing.xs);class R extends o.Component{static #e=this.contextType=b.fH;constructor(e){super(e),this.state={error:void 0}}static getDerivedStateFromError(e){return{error:e}}componentDidCatch(e,t){let{context:r}=this.context;(0,k.qs)(r,e,t)}render(){return this.state.error?(0,a.jsx)(E,{show:!0,error:this.state.error}):this.props.children}}var A=r(72646),F=r(93075),M=r(28827),O=()=>{let e=(0,M.N)({id:"sdui_error_403_title",defaultMessage:"403 Error"}),t=(0,M.N)({id:"sdui_error_403_message",defaultMessage:"The requested URL was forbidden."});return(0,a.jsx)(A.m,{quotes:F.Z,title:e,message:t})},D=r(84915),q=()=>{let e=(0,M.N)({id:"error_404_title",defaultMessage:"404 Error"}),t=(0,M.N)({id:"error_404_message",defaultMessage:"The requested URL was not found on our server."});return(0,a.jsx)(A.m,{quotes:D.Z,title:e,message:t})};let N=()=>(0,a.jsx)(V,{"data-testid":"ui-workflow-loading-screen",children:(0,a.jsx)(l.Loader,{})}),V=i.default.div.withConfig({componentId:"sc-5564552a-0"})(["display:flex;justify-content:center;align-items:center;height:100%;width:100%;"]);var P=r(13433),$=r(69851);let G=e=>{let{isOpen:t,heading:r,description:o,abortButtonText:n,confirmButtonText:i,onClickConfirm:d,onClickAbort:s}=e;return(0,a.jsx)(C,{isOpen:t,children:(0,a.jsxs)(B,{"data-testid":"ui-workflow-confirmation-prompt",children:[(0,a.jsx)(H,{"data-testid":"ui-workflow-confirmation-prompt-heading",children:r}),(0,a.jsx)(z,{"data-testid":"ui-workflow-confirmation-prompt-description",children:o}),(0,a.jsxs)(Y,{children:[(0,a.jsx)(l.Button,{"data-testid":"ui-workflow-confirmation-prompt-abort-button",baseColor:"accent2",width:"full-width",onClick:s,children:n}),(0,a.jsx)(l.SecondaryButton,{"data-testid":"ui-workflow-confirmation-prompt-confirm-button",onColor:"accent2",width:"full-width",onClick:d,children:i})]})]})})},H=i.default.div.withConfig({componentId:"sc-e5fcd775-0"})(["",""],(0,d.setTypographyType)("headline6")),z=i.default.div.withConfig({componentId:"sc-e5fcd775-1"})(["",""],(0,d.setTypographyType)("body")),B=i.default.div.withConfig({componentId:"sc-e5fcd775-2"})(["display:flex;flex-direction:column;gap:",";max-width:22rem;"],d.spacing.m),Y=i.default.div.withConfig({componentId:"sc-e5fcd775-3"})(["display:flex;gap:",";padding-top:",";border-top:0.1rem solid ",";"],d.spacing.xs,d.spacing.s,(0,d.getColorVarValue)("ipt-base-border-color")),J=e=>{let{isOpen:t,onClickConfirm:r,onClickAbort:o}=e,n=(0,I.Z)();return(0,a.jsx)(G,{isOpen:t,heading:n.formatMessage({id:"ui_workflow_confirmation_prompt_heading",defaultMessage:"You haven’t submitted your changes"}),description:n.formatMessage({id:"ui_workflow_confirmation_prompt_description",defaultMessage:"If you leave, any unsubmitted changes you have made here will be discarded."}),abortButtonText:n.formatMessage({id:"ui_workflow_confirmation_prompt_abort_button_text",defaultMessage:"Continue working"}),confirmButtonText:n.formatMessage({id:"ui_workflow_confirmation_prompt_confirm_button_text",defaultMessage:"Leave"}),onClickAbort:o,onClickConfirm:r})};var K=r(90928);let Q=()=>{let{formState:{dirtyFields:e,submitCount:t}}=(0,n.Gc)(),{result:r}=(0,$.vq)();return r.data?.workflowState.status!==K.v.TERMINATED&&(Object.keys(e).length>0||t>0)},Z=()=>{let[e,t]=(0,o.useState)(!0),r=Q(),a=(0,o.useCallback)(t=>{r&&e&&t.preventDefault()},[r,e]);return(0,o.useEffect)(()=>(window.addEventListener("beforeunload",a),()=>{window.removeEventListener("beforeunload",a)}),[a]),{disableBrowserConfirmationAlertBeforeUnload:()=>{t(!1)}}},X=(0,o.createContext)({handleWorkflowAction:()=>void 0}),ee=e=>{let{onCancel:t,children:r,shouldCancelUIWorkflow:i,onAbortUIWorkflowCancelConfirmation:l}=e,{result:d,updateUIWorkflow:s}=(0,o.useContext)($.eX),{handleSubmit:c}=(0,n.Gc)(),u=Q(),{disableBrowserConfirmationAlertBeforeUnload:f}=Z(),[p,h]=(0,o.useState)({isOpen:!1});(0,o.useEffect)(()=>{i&&g()},[i]);let m=e=>{c(t=>{s(e,(0,k.RJ)(t,d.data?.body.elements??[]))})()},g=e=>{u?h({isOpen:!0,cancelActionId:e}):w(e)},w=e=>{e&&s(e,[]),f(),t?.()};return(0,a.jsxs)(X.Provider,{value:{handleWorkflowAction:(e,t,r)=>{switch(e){case P.mP.Cancel:g(r);break;case P.mP.Primary:case P.mP.Secondary:t?m(r):s(r,[]);break;default:throw Error(`Unknown UiWorkflowActionType ${e} with ${r}`)}},uiWorkflowEngineState:d},children:[r,(0,a.jsx)(J,{isOpen:p.isOpen,onClickConfirm:()=>{w(p.cancelActionId),h({isOpen:!1})},onClickAbort:()=>{h({isOpen:!1}),l?.()}})]})},et=()=>(0,o.useContext)(X);var er=r(95217);let ea={contentHeader:"ui-workflow-content-header",heading:"ui-workflow-content-header-heading",subHeading:"ui-workflow-content-header-sub-heading",description:"ui-workflow-content-header-description",helpLink:"ui-workflow-content-header-helplink"},eo=e=>{let{heading:t,subHeading:r,description:o,helpLink:n}=e;if(!t&&!r&&!o)return null;let i=n?(0,a.jsx)("div",{children:(0,a.jsx)(er.IconButton,{name:"help-outline",linkType:"launch",label:n.label,href:n.url,"data-testid":ea.helpLink})}):void 0;return(0,a.jsxs)(en,{"data-testid":ea.contentHeader,children:[(0,a.jsxs)(ei,{children:[t&&(0,a.jsx)(el,{"data-testid":ea.heading,children:t}),r&&(0,a.jsx)(ed,{"data-testid":ea.subHeading,children:r}),o&&(0,a.jsx)(es,{"data-testid":ea.description,children:o})]}),i]})},en=i.default.div.withConfig({componentId:"sc-793a9ad3-0"})(["display:flex;flex-direction:row;justify-content:space-between;"]),ei=i.default.div.withConfig({componentId:"sc-793a9ad3-1"})(["margin:"," ",";flex-grow:1;display:flex;flex-direction:column;gap:",";"],d.spacing.s,d.spacing.xs,d.spacing.xxs),el=i.default.h3.withConfig({componentId:"sc-793a9ad3-2"})(["",""],(0,d.setTypographyType)("headline6")),ed=i.default.div.withConfig({componentId:"sc-793a9ad3-3"})(["",""],(0,d.setTypographyType)("subtitle")),es=i.default.div.withConfig({componentId:"sc-793a9ad3-4"})([""," color:",";"],(0,d.setTypographyType)("bodySmall"),(0,d.getColorVarValue)("ipt-on-base-textSecondary-color"));var ec=r(87961);let eu=e=>{let{subjectName:t,subjectMetadataList:r,heading:o,subjectImage:n}=e;return(0,a.jsxs)(ep,{"data-testid":"ui-workflow-context-header",children:[(0,a.jsx)(eh,{"data-testid":"ui-workflow-context-header-poster",children:(0,a.jsx)(ef,{imageType:n.imageType,imageModel:n.imageModel})}),(0,a.jsxs)(em,{children:[(0,a.jsx)(eg,{"data-testid":"ui-workflow-context-header-subject-name",children:t}),(0,a.jsx)(ew,{showDividers:!0,"data-testid":"ui-workflow-context-header-subject-metadata-list",children:r.map(e=>(0,a.jsx)(l.InlineListItem,{children:e},e))}),(0,a.jsx)(ex,{"data-testid":"ui-workflow-context-header-heading",children:o})]})]})},ef=e=>{let{imageType:t,imageModel:r}=e;return"name"===t?(0,a.jsx)(l.AvatarImage,{imageModel:r,size:55}):(0,a.jsx)(l.PosterImage,{imageType:t,imageModel:r,size:40})},ep=i.default.div.withConfig({componentId:"sc-26522796-0"})(["display:flex;gap:",";padding:",";background-color:",";"],d.spacing.xs,d.spacing.s,(0,d.getColorVarValue)("ipt-baseAlt-bg")),eh=i.default.div.withConfig({componentId:"sc-26522796-1"})(["margin-top:",";"],d.spacing.xxs),em=i.default.div.withConfig({componentId:"sc-26522796-2"})(["display:flex;flex-direction:column;justify-content:center;min-width:0;"]),eg=i.default.h1.withConfig({componentId:"sc-26522796-3"})([""," "," color:",";"],(0,ec.S)(2),(0,d.setTypographyType)("subtitle"),(0,d.getColorVarValue)("ipt-on-baseAlt-textSecondary-color")),ew=(0,i.default)(l.InlineList).withConfig({componentId:"sc-26522796-4"})([""," font-size:0.75rem;color:",";"],(0,d.setTypographyType)("bodySmall"),(0,d.getColorVarValue)("ipt-on-baseAlt-textSecondary-color")),ex=i.default.h2.withConfig({componentId:"sc-26522796-5"})([""," "," color:",";font-size:1.125rem;"],(0,ec.S)(2),(0,d.setTypographyType)("headline6"),(0,d.getColorVarValue)("ipt-base-color"));var eb=r(31473);let ek={container:"ui-workflow-feedback-display-element"},ey=e=>{let t,{id:r,feedbackType:o,messages:n}=e,i=1===n.length?(0,a.jsx)(ej,{children:(0,a.jsx)(l.HTMLContent,{html:n[0]})}):(0,a.jsx)(eE,{children:n.map(e=>(0,a.jsx)(e_,{children:(0,a.jsx)(l.HTMLContent,{html:e,display:"inline"})},`${r}-${(0,eb.p)(e)}`))});switch(o){case P.Ex.Error:t=(0,a.jsx)("div",{role:"alert",children:(0,a.jsxs)(eI,{bgColor:"accent3",children:[(0,a.jsx)("div",{children:(0,a.jsx)(ev,{name:"info"})}),i]})});break;case P.Ex.Warning:t=(0,a.jsxs)(eI,{bgColor:"accent1",children:[(0,a.jsx)("div",{children:(0,a.jsx)(eT,{name:"info"})}),i]});break;default:case P.Ex.Information:t=(0,a.jsxs)(eI,{bgColor:"accent2",children:[(0,a.jsx)("div",{children:(0,a.jsx)(eC,{name:"info"})}),i]})}return(0,a.jsx)("div",{"data-testid":ek.container,children:t})},eI=(0,i.default)(l.BlockQuote).withConfig({componentId:"sc-ba8a8516-0"})(["display:flex;gap:",";margin:",";"],d.spacing.xs,d.spacing.xs),ev=(0,i.default)(l.Icon).withConfig({componentId:"sc-ba8a8516-1"})(["color:",";"],(0,d.setPropertyToColorVar)("color","ipt-accent3-color")),eC=(0,i.default)(l.Icon).withConfig({componentId:"sc-ba8a8516-2"})(["color:",";"],(0,d.setPropertyToColorVar)("color","ipt-accent2-color")),eT=(0,i.default)(l.Icon).withConfig({componentId:"sc-ba8a8516-3"})(["color:",";"],(0,d.setPropertyToColorVar)("color","ipt-accent1-color")),ej=i.default.div.withConfig({componentId:"sc-ba8a8516-4"})(["display:flex;flex-direction:column;justify-content:center;"]),eE=i.default.ul.withConfig({componentId:"sc-ba8a8516-5"})(["list-style-type:disc;"]),e_=i.default.li.withConfig({componentId:"sc-ba8a8516-6"})(["margin-left:",";"],d.spacing.xs),eW=e=>{let{id:t,feedbackElements:r}=e,o=[];return r?.forEach(e=>{if("UIWorkflowFeedbackDisplayElement"===e.__typename){let t=e.feedbackData;o.push(a.jsx(ey,{id:e.id,feedbackType:t.status,messages:t.feedbackItems.map(e=>e.title.value.plaidHtml??"")}))}else throw Error(`Unknown UIWorkflowFormElementFeedback with typename: ${e.__typename}`)}),(0,a.jsx)("div",{id:t,"data-testid":"ui-workflow-form-element-feedback-container",children:o})},eU=e=>{let{disabled:t,name:r,label:o,feedbackElements:i}=e,{field:d}=(0,n.bc)({name:r});return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(l.CheckBox,{...d,"aria-describedby":(0,k.cF)(r),disabled:t,"aria-label":o,checked:d.value,"data-testid":"ui-workflow-checkbox-form-element",label:o,onChange:e=>d.onChange({target:{name:d.name,value:e}})}),(0,a.jsx)(eW,{id:(0,k.cF)(r),feedbackElements:i})]})},eL=e=>{let{html:t}=e;return 0===t.length?null:(0,a.jsx)(eS,{html:t})},eS=(0,i.default)(l.HTMLContent).withConfig({componentId:"sc-80cc5087-0"})([""," "," padding:0 "," ",";"],(0,d.setPropertyToColorVar)("color","ipt-on-base-textSecondary-color"),(0,d.setTypographyType)("bodySmall"),d.spacing.xs,d.spacing.xs);var eR=r(18865);let eA="hasHelpLink",eF="noHelpLink",eM=e=>{let{name:t,label:r,radioGroupConstraints:o,radioOptions:i,feedbackElements:l,disabled:d,helpLink:s}=e,{field:c}=(0,n.bc)({name:t}),u=s?(0,a.jsx)("div",{children:(0,a.jsx)(er.IconButton,{name:"help-outline",linkType:"launch",label:s.label,href:s.url})}):void 0,f=s?eA:eF,{ref:p,...h}=c;return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsxs)(eD,{className:f,children:[(0,a.jsx)(eO,{children:(0,a.jsx)(eR.RadioButtonGroup,{...h,disabled:d,options:i.map((e,r)=>({"aria-describedby":(0,k.cF)(t),"aria-required":!!o?.isRequired?.value,label:e.text,ref:0===r?p:void 0,value:e.value})),value:c.value,label:r})}),u]}),(0,a.jsx)(eW,{id:(0,k.cF)(t),feedbackElements:l})]})},eO=i.default.div.withConfig({componentId:"sc-f370ea9c-0"})(["padding-top:",";"],d.spacing.s),eD=i.default.div.withConfig({componentId:"sc-f370ea9c-1"})(["display:flex;flex-direction:row;justify-content:space-between;padding-top:0;padding-bottom:",";padding-left:",";border:1px solid rgba(",",0.38);border-radius:4px;.","{padding-right:0;}.","{padding-right:",";}"],d.spacing.xxs,d.spacing.s,(0,d.getColorVarValue)("ipt-on-base-rgb"),eA,eF,d.spacing.s);var eq=r(71902);let eN=e=>{let{name:t,label:r,constraints:o,selectOptions:i,feedbackElements:l,disabled:d}=e,{field:s}=(0,n.bc)({name:t});return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(eq.Select,{...s,"aria-describedby":(0,k.cF)(t),"aria-required":o?.isRequired?.value||!1,disabled:d,options:i,value:s.value,label:r,includeEmptyOption:!o?.isRequired?.value,onChange:e=>{s.onChange(e&&""!==e?e:void 0)}}),(0,a.jsx)(eW,{id:(0,k.cF)(t),feedbackElements:l})]})};var eV=r(3255),eP=r.n(eV),e$=r(97544);let eG=new(eP()),eH={minimumRequiredCharText:"ui-workflow-text-area-minimum-required-char-text",requiredAdditionalCharactersText:"ui-workflow-text-area-required-additional-characters-text",metRequiredAdditionalCharactersText:"ui-workflow-text-area-met-required-additional-characters-text"},ez={MIN_LENGTH_BREAKPOINT:49,ROWS:{DEFAULT:4,LARGE:12}},eB=e=>{let{name:t,label:r,constraints:i,feedbackElements:d,disabled:s}=e,{field:c}=(0,n.bc)({name:t}),u=!!i?.minimumCharacterLength,f=(0,o.useMemo)(()=>{let e=c.value,t=i?.minimumCharacterLength?.value??0;return e?Math.max(0,t-eG.countGraphemes(e)):t},[c.value,i?.minimumCharacterLength?.value]);return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(l.TextArea,{...c,onChange:e=>{c.onChange((0,k.AJ)(e,i?.maximumCharacterLength?.value))},"aria-describedby":(0,k.cF)(t),"aria-required":!!i?.isRequired?.value,disabled:s,value:c.value,label:r,stateType:(0,k.oc)(d)?e$.StateType.error:e$.StateType.default,rows:i&&i.minimumCharacterLength&&i.minimumCharacterLength.value>ez.MIN_LENGTH_BREAKPOINT?ez.ROWS.LARGE:ez.ROWS.DEFAULT}),u&&(0,a.jsxs)(eY,{"data-testid":eH.minimumRequiredCharText,children:["Minimum required char."," ",f>0?(0,a.jsx)(eJ,{"data-testid":eH.requiredAdditionalCharactersText,children:f}):(0,a.jsx)("span",{"data-testid":eH.metRequiredAdditionalCharactersText,children:"met"})]}),(0,a.jsx)(eW,{id:(0,k.cF)(t),feedbackElements:d})]})},eY=i.default.div.withConfig({componentId:"sc-e664d7a0-0"})([""," "," margin-left:",";"],(0,d.setPropertyToColorVar)("color","ipt-on-base-textSecondary-color"),(0,d.setTypographyType)("bodySmall"),d.spacing.xs),eJ=i.default.span.withConfig({componentId:"sc-e664d7a0-1"})(["font-weight:bold;"]);var eK=r(7303);let eQ=e=>{let{name:t,label:r,constraints:o,feedbackElements:i,disabled:d}=e,{field:s}=(0,n.bc)({name:t});return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(l.TextInput,{...s,"aria-describedby":(0,k.cF)(t),"aria-required":!!o?.isRequired?.value,autoComplete:"off",disabled:d,value:s.value,label:r,minLength:o?.minimumCharacterLength?.value,maxLength:o?.maximumCharacterLength?.value,stateType:(0,k.oc)(i)?eK.StateType.error:eK.StateType.default}),(0,a.jsx)(eW,{id:(0,k.cF)(t),feedbackElements:i})]})};var eZ=r(50366),eX=r(30816),e0=r(9277);let e1={RATING_COMPLETE:{id:"title_sdui_titleRating_ratingComplete",defaultMessage:"Rating updated successfully: {rating}/10"},RATING_STAR_SELECTED:{id:"title_sdui_titleRating_ratingStarSelected",defaultMessage:"Selected, Rate {rating}"},RATING_STAR_UNSELECTED:{id:"title_sdui_titleRating_ratingStarUnselected",defaultMessage:"Rate {rating}, Unselected"},LOADING:{id:"title_sdui_titleRating_ratingLoading",defaultMessage:"Loading rating"},YOUR_RATING:{id:"title_sdui_titleRating_yourRating",defaultMessage:"Your rating"},YOUR_RATING_IS:{id:"title_sdui_titleRating_yourRatingIs",defaultMessage:"Your rating is {rating}/10"}},e2="ctbt_tt_rt",e9=e=>{let{isLoading:t,rating:r}=e,o=r??"?",n=(0,I.Z)(),i=n.formatMessage(e1.YOUR_RATING),l=t?n.formatMessage(e1.LOADING):n.formatMessage(e1.YOUR_RATING_IS,{rating:o});return(0,a.jsx)("div",{"arial-live":"polite",children:(0,a.jsxs)(e5,{"data-testid":"rating-header","aria-label":l,children:[(0,a.jsx)(e8,{"aria-hidden":"true",children:i}),(0,a.jsxs)("span",{"aria-hidden":"true",children:[(0,a.jsx)(e8,{children:o}),"/10"]})]})})},e8=i.default.span.withConfig({componentId:"sc-2b2b959c-0"})(["",";font-weight:600;"],(0,d.setPropertyToColorVar)("color","ipt-on-base-textPrimary-color")),e5=i.default.div.withConfig({componentId:"sc-2b2b959c-1"})(["display:flex;justify-content:space-between;width:100%;",";"],(0,d.setPropertyToColorVar)("color","ipt-on-base-textSecondary-color")),e4=e=>{let{titleId:t,loading:r}=e,[n,i]=o.useState(),l=(0,I.Z)(),d=(0,e0.b)([{id:t}]),{rating:s,updateRating:c}=(0,eZ.useRatingsContext)(t),[u,f]=o.useState(s);(0,o.useEffect)(()=>{d.fetching||!d.data||u||f(d.data?.titles?.find(e=>e?.id===t)?.userRating?.value)},[d.fetching]);let{updateTitleRating:p}=(0,eX.vY)({titleId:t,refTag:e2,currentRating:u}),h=async e=>{i(!1),e&&(c(e,e2,()=>p(e,t)),i(!0))},m=r||d.fetching;return(0,a.jsxs)(e6,{"data-testid":"rating-container",children:[(0,a.jsx)(e9,{rating:s,isLoading:m}),(0,a.jsx)(eZ.RatingStarBar,{initialRating:s??0,loading:m,onClick:h,starButtonAriaLabelFn:(e,t)=>e===t?l.formatMessage(e1.RATING_STAR_SELECTED,{rating:e}):l.formatMessage(e1.RATING_STAR_UNSELECTED,{rating:e})}),(0,a.jsx)("div",{"aria-live":"polite",children:n&&(0,a.jsxs)(e3,{"data-testid":"rating-confirmation",children:[l.formatMessage(e1.RATING_COMPLETE,{rating:s}),(0,a.jsx)(e7,{})]})})]})},e7=(0,i.styled)(e=>{let{className:t="",id:r=""}=e;return(0,a.jsxs)("svg",{width:"24",height:"24",xmlns:"http://www.w3.org/2000/svg",className:t,id:r,viewBox:"0 0 24 24",fill:"currentColor",role:"presentation",children:[(0,a.jsx)("path",{d:"M0 0h24v24H0z",fill:"none"}),(0,a.jsx)("path",{d:"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"})," "]})}).withConfig({componentId:"sc-e20d8a67-0"})(["margin-left:auto;",""],(0,d.setPropertyToColorVar)("color","ipt-on-base-accent4-color")),e3=i.styled.div.withConfig({componentId:"sc-e20d8a67-1"})(["display:flex;padding:"," "," "," ",";background:rgba(",",0.05);"," "," ",";"],d.spacing.s,d.spacing.m,d.spacing.s,d.spacing.m,(0,d.getColorVar)("ipt-accent4-rgb"),(0,d.setTypographyType)("bodySmall"),(0,d.setPropertyToShapeVar)("border-radius","ipt-cornerRadius"),(0,d.setPropertyToColorVar)("color","ipt-on-base-textPrimary-color")),e6=i.styled.div.withConfig({componentId:"sc-e20d8a67-2"})(["display:inline-flex;flex-direction:column;align-items:stretch;width:100%;"]),te=e=>{let{element:t}=e,{uiWorkflowEngineState:r}=et(),o=!!r?.isFetching;switch(t.__typename){case"UIWorkflowCheckboxFormElement":return(0,a.jsx)(tt,{children:(0,a.jsx)(eU,{name:t.id,label:t.label.value.plainText??"",feedbackElements:t.feedback,disabled:o})});case"UIWorkflowRadioGroupFormElement":return(0,a.jsx)(tt,{children:(0,a.jsx)(eM,{name:t.id,label:t.label.value.plainText??"",radioOptions:t.radioGroupOptions?.map(e=>({text:e.text.value,value:e.value}))??[],feedbackElements:t.feedback,helpLink:t.helpLink?{url:t.helpLink.url,label:t.helpLink.label.value}:void 0,disabled:o,radioGroupConstraints:t.radioGroupConstraints})});case"UIWorkflowSelectFormElement":return(0,a.jsx)(tt,{children:(0,a.jsx)(eN,{name:t.id,label:t.label.value.plainText??"",selectOptions:t.selectOptions?.map(e=>({text:e.text.value,value:e.value}))??[],feedbackElements:t.feedback,disabled:o,constraints:t.selectConstraints})});case"UIWorkflowTextFormElement":return(0,a.jsx)(tt,{children:(0,a.jsx)(eQ,{name:t.id,label:t.label.value.plainText??"",feedbackElements:t.feedback,disabled:o,constraints:t.textConstraints})});case"UIWorkflowTextAreaFormElement":return(0,a.jsx)(tt,{children:(0,a.jsx)(eB,{name:t.id,label:t.label.value.plainText??"",feedbackElements:t.feedback,disabled:o,constraints:t.textAreaConstraints})});case"UIWorkflowMarkdownDisplayElement":return(0,a.jsx)(eL,{html:t.markdown.value.plaidHtml??""});case"UIWorkflowFeedbackDisplayElement":return(0,a.jsx)(ey,{id:t.id,feedbackType:t.feedbackData.status,messages:t.feedbackData.feedbackItems.map(e=>e.title.value.plaidHtml??"").filter(e=>!!e)});case"UIWorkflowTitleRatingElement":return(0,a.jsx)(tt,{children:(0,a.jsx)(e4,{titleId:t.title.id,loading:o})});default:throw Error(`Unknown UIWorkflowElement with typename: ${t.__typename}`)}},tt=i.default.div.withConfig({componentId:"sc-16c130a2-0"})(["margin:0 "," ",";"],d.spacing.xs,d.spacing.s),tr={primaryButton:"ui-workflow-footer-primary-button",secondaryButton:"ui-workflow-footer-secondary-button",cancelButton:"ui-workflow-footer-cancel-button",buttonLoader:"ui-workflow-footer-button-loader"},ta=e=>{let{actionId:t,requiresFormData:r,actionType:o,label:n}=e,{handleWorkflowAction:i,uiWorkflowEngineState:d}=et(),s=d?.isFetching,c=d?.operationDetails?.actionId,u=s&&c===t?(0,a.jsx)(l.Loader,{testId:tr.buttonLoader}):n;switch(o){case P.mP.Primary:return(0,a.jsx)(l.Button,{ariaLabel:n,"data-testid":tr.primaryButton,width:"full-width",baseColor:"accent2",onClick:()=>i(o,r,t),disabled:s,children:u});case P.mP.Secondary:return(0,a.jsx)(l.OutlineButton,{ariaLabel:n,"data-testid":tr.secondaryButton,width:"full-width",onColor:"accent2",onClick:()=>i(o,r,t),disabled:s,children:u});case P.mP.Cancel:return(0,a.jsx)(l.SecondaryButton,{ariaLabel:n,"data-testid":tr.cancelButton,width:"full-width",onColor:"accent2",onClick:()=>i(o,r,t),disabled:s,children:u});default:throw Error(`Unknown Footer UIWorkflowActionType: ${o}`)}},to=e=>{let{actions:t}=e;return t.length?(0,a.jsx)(tn,{"data-testid":"ui-workflow-footer",children:(0,a.jsx)(ti,{children:t.map(e=>(0,a.jsx)(ta,{actionId:e.id,requiresFormData:e.requiresFormData,actionType:e.type,label:e.label.value??""},e.id))})}):null},tn=i.default.div.withConfig({componentId:"sc-53398bb1-0"})(["box-shadow:0 -3px 8px 0 rgb(0 0 0 / 19%);padding:",";display:flex;flex-direction:column;gap:",";"],d.spacing.s,d.spacing.xs),ti=i.default.div.withConfig({componentId:"sc-53398bb1-1"})(["display:flex;flex-direction:column;gap:",";"],d.spacing.xs),tl="data-ui-workflow-element-wrapper-id",td=e=>{let{viewModel:t}=e,{uiWorkflowEngineState:r}=et(),{setFocus:i}=(0,n.Gc)(),l=(0,o.useRef)(null),d=(0,o.useRef)(null),s=(0,o.useRef)(null);return(0,o.useEffect)(()=>{l.current?.querySelectorAll("a").forEach(k.X0)},[r?.data]),(0,o.useEffect)(()=>{let e=r?.data?.body.formState.firstFormElementWithValidationErrorId;if(e){i(e);let t=l.current?.querySelector(`[${tl}=${ts(e)}]`);t?.scrollIntoView({behavior:"smooth",block:"start"})}else s.current?.focus(),d.current?.scrollTo({top:0})},[r?.data]),(0,a.jsxs)(tc,{ref:l,"data-testid":"ui-workflow-container",children:[(0,a.jsx)(tu,{ref:d,children:(0,a.jsxs)(tf,{children:[(0,a.jsx)(eu,{...t.contextHeader}),(0,a.jsxs)(th,{"data-testid":"ui-workflow-content-header-and-body-container",ref:s,tabIndex:-1,children:[(0,a.jsx)(eo,{...t.contentHeader}),(0,a.jsx)("div",{"data-testid":"ui-workflow-body",children:t.body.elements.map(e=>(0,a.jsx)("div",{[tl]:ts(e.id),children:(0,a.jsx)(te,{element:e})},e.id))})]})]})}),(0,a.jsx)(tp,{children:(0,a.jsx)(to,{actions:t.actionTray.actions})})]})},ts=e=>`ui-workflow-element-${e}-wrapper`,tc=i.default.div.withConfig({componentId:"sc-9ab7d986-0"})(["height:100%;display:flex;flex-direction:column;background:",";"],(0,d.getColorVarValue)("ipt-base-shade2-bg")),tu=i.default.div.withConfig({componentId:"sc-9ab7d986-1"})(["flex:1;overflow-y:auto;"]),tf=i.default.div.withConfig({componentId:"sc-9ab7d986-2"})(["background-color:",";border-bottom:0.1rem solid ",";"],(0,d.getColorVarValue)("ipt-base-bg"),(0,d.getColorVarValue)("ipt-base-border-color")),tp=i.default.div.withConfig({componentId:"sc-9ab7d986-3"})(["background-color:",";"],(0,d.getColorVarValue)("ipt-base-bg")),th=i.default.div.withConfig({componentId:"sc-9ab7d986-4"})(["outline-offset:-0.125rem;"]);var tm=r(78481);let tg=e=>{let{onCancel:t,shouldCancelUIWorkflow:r,onAbortUIWorkflowCancelConfirmation:i}=e,l=(0,n.cI)(),{result:d}=(0,$.vq)(),s=!!(d.error||d.notFoundError||d.forbiddenError);return(0,o.useEffect)(()=>{d.data&&l.reset(d.data.body.formState.initialFormElementValues,{keepSubmitCount:!0}),s&&l.reset()},[d.data,s]),(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(f,{}),(0,a.jsx)(R,{children:(0,a.jsx)(n.RV,{...l,children:(0,a.jsxs)(ee,{onCancel:t,onAbortUIWorkflowCancelConfirmation:i,shouldCancelUIWorkflow:r,children:[s?null:d.data?(0,a.jsx)(td,{viewModel:d.data}):null,d.notFoundError?(0,a.jsx)(q,{}):d.forbiddenError?(0,a.jsx)(O,{}):d.error?(0,a.jsx)(E,{error:d.error,show:!0}):null,d.operationDetails?.type===tm.o.START&&d.isFetching?(0,a.jsx)(N,{}):null]})})})]})}},69851:function(e,t,r){r.d(t,{eX:function(){return ea},kw:function(){return eo},vq:function(){return en}});var a=r(52322),o=r(2784),n=r(25436),i=r(85767),l=r(64180),d=r(29609),s=r(76291),c=r(19596),u=r(45103),f=r(91842),p=r(54488);function h(e){let{getLatestUIWorkflowFn:t}=e,[r,n]=(0,o.useState)(""),[i,l]=(0,o.useState)(!1);return(0,a.jsxs)(m,{children:[(0,a.jsx)(u.TextInput,{disabled:i,label:"Execution Id",name:"execution-id",value:r,onChange:e=>n(e.target.value),placeholder:"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"}),(0,a.jsx)(u.Button,{disabled:i,width:"full-width",onClick:()=>{l(!0),t(r).then(()=>{l(!1)})},children:"Submit"})]})}let m=c.default.div.withConfig({componentId:"sc-1129a5f9-0"})(["display:flex;gap:",";flex-direction:column;"],f.spacing.xs),g=e=>({type:"react-node",id:"get-latest-ui-workflow-form",title:"Get executing workflow",value:(0,a.jsx)(p.f$,{children:(0,a.jsx)(h,{getLatestUIWorkflowFn:e})})});var w=r(45218),x=r(63955),b=r(18364),k=r(60251);let y="decoded-action-context-tab",I="encoded-action-context-tab",v=e=>{let{startUIWorkflowFunction:t}=e,[r,n]=(0,o.useState)(y),{handleSubmit:i,control:l,formState:{isSubmitting:d},setValue:s}=(0,x.cI)({defaultValues:{decodedActionContext:"",encodedActionContext:""}});return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(u.Tabs,{alignment:"fullwidth",value:r,onChange:e=>{n(e)},tabs:[{id:y,label:"Decoded",preIcon:"visibility"},{id:I,label:"Encoded",preIcon:"translate"}]}),(()=>{let e=(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(p.lL,{children:"Examples"}),(0,a.jsx)(u.ChipList,{children:Object.entries(b.C).map(e=>{let[t,r]=e;return(0,a.jsx)(u.Chip,{label:t,onSelect:()=>{s("decodedActionContext",(0,k.Pz)(r)),s("encodedActionContext",(0,w.r)(JSON.stringify(r)))}},t)})})]}),o=(0,a.jsx)(u.Button,{disabled:d,width:"full-width",buttonType:"submit",onClick:i(e=>t(e.encodedActionContext)),children:"Submit"});return r===I?(0,a.jsxs)(T,{children:[(0,a.jsx)(x.Qr,{name:"encodedActionContext",control:l,render:e=>{let{field:t}=e;return(0,a.jsx)(u.TextArea,{...t,onChange:e=>{t.onChange(e),s("decodedActionContext",(0,k.Pz)((0,k.Lw)(e)))},rows:6,disabled:d,label:"Encoded Action Context",placeholder:`e.g. ${(0,k.Yh)(JSON.stringify(b.C.ADD_FAQ))}`})}}),e,o]},r):(0,a.jsxs)(T,{children:[(0,a.jsx)(x.Qr,{name:"decodedActionContext",control:l,render:e=>{let{field:t}=e;return(0,a.jsx)(u.TextArea,{...t,onChange:e=>{t.onChange(e),s("encodedActionContext",(0,k.Yh)(e))},disabled:d,rows:12,label:"Decoded Action Context",placeholder:(0,k.Pz)(b.C.ADD_FAQ)})}}),e,o]},r)})()]})},C=e=>({type:"react-node",id:"start-ui-workflow-form",title:"Start workflow",value:(0,a.jsx)(p.f$,{children:(0,a.jsx)(v,{startUIWorkflowFunction:e})})}),T=c.default.div.withConfig({componentId:"sc-f1897f0d-0"})(["display:flex;flex-direction:column;gap:",";"],f.spacing.s);var j=r(78481),E=r(23760);let _=e=>{let{currentOperationType:t,startUIWorkflowMutationResult:r,updateUIWorkflowMutationResult:a,getLatestUIWorkflowQueryResult:n}=e,{addOrUpdateItemInDebugBar:i}=(0,E.WW)();(0,o.useEffect)(()=>{i?.({type:"query",id:"ui-workflow-graph-query",title:"Graph query",value:t?(e=>{switch(e){case j.o.START:return r;case j.o.UPDATE:return a;case j.o.GET_LATEST:return{...n,stale:!1}}})(t):void 0})},[t,r,a,n])};var W=r(30382),U=r.n(W);let L=U()`
+    fragment UIWorkflowHelpLink on HelpLink {
+        label {
+            value
+        }
+        url
+    }
+`,S=U()`
+    fragment UIWorkflowLocalizedMarkdown on LocalizedMarkdown {
+        value {
+            plainText
+            plaidHtml
+        }
+    }
+`,R=U()`
+    fragment UIWorkflowFeedbackDisplayElement on UIWorkflowFeedbackDisplayElement {
+        id
+        feedbackData: feedback {
+            status
+            feedbackItems {
+                title {
+                    ...UIWorkflowLocalizedMarkdown
+                }
+                message {
+                    ...UIWorkflowLocalizedMarkdown
+                }
+            }
+        }
+    }
+`,A=U()`
+    fragment UIWorkflowTextFormElement on UIWorkflowTextFormElement {
+        id
+        label {
+            value {
+                plainText
+            }
+        }
+        textValue
+        textConstraints {
+            isRequired {
+                value
+            }
+            minimumCharacterLength {
+                value
+                feedback {
+                    title {
+                        ...UIWorkflowLocalizedMarkdown
+                    }
+                    message {
+                        ...UIWorkflowLocalizedMarkdown
+                    }
+                }
+            }
+            maximumCharacterLength {
+                value
+                feedback {
+                    title {
+                        ...UIWorkflowLocalizedMarkdown
+                    }
+                    message {
+                        ...UIWorkflowLocalizedMarkdown
+                    }
+                }
+            }
+        }
+        feedback {
+            __typename
+            ...UIWorkflowFeedbackDisplayElement
+        }
+    }
+    ${R}
+    ${S}
+`,F=U()`
+    fragment UIWorkflowTextAreaFormElement on UIWorkflowTextAreaFormElement {
+        id
+        label {
+            value {
+                plainText
+            }
+        }
+        textAreaValue
+        textAreaConstraints {
+            minimumCharacterLength {
+                value
+                feedback {
+                    title {
+                        ...UIWorkflowLocalizedMarkdown
+                    }
+                    message {
+                        ...UIWorkflowLocalizedMarkdown
+                    }
+                }
+            }
+            maximumCharacterLength {
+                value
+                feedback {
+                    title {
+                        ...UIWorkflowLocalizedMarkdown
+                    }
+                    message {
+                        ...UIWorkflowLocalizedMarkdown
+                    }
+                }
+            }
+            isRequired {
+                value
+                feedback {
+                    title {
+                        ...UIWorkflowLocalizedMarkdown
+                    }
+                    message {
+                        ...UIWorkflowLocalizedMarkdown
+                    }
+                }
+            }
+        }
+        feedback {
+            __typename
+            ...UIWorkflowFeedbackDisplayElement
+        }
+    }
+    ${R}
+`,M=U()`
+    fragment UIWorkflowCheckboxFormElement on UIWorkflowCheckboxFormElement {
+        checkboxValue
+        checkboxConstraints {
+            isRequired {
+                value
+                feedback {
+                    title {
+                        ...UIWorkflowLocalizedMarkdown
+                    }
+                    message {
+                        ...UIWorkflowLocalizedMarkdown
+                    }
+                }
+            }
+        }
+        id
+        label {
+            value {
+                plainText
+            }
+        }
+        feedback {
+            ...UIWorkflowFeedbackDisplayElement
+        }
+    }
+    ${R}
+`,O=U()`
+    fragment UIWorkflowTitleRatingElement on UIWorkflowTitleRatingElement {
+        id
+        title {
+            id
+        }
+    }
+`,D=U()`
+    fragment UIWorkflowLocalizedStringInputOption on UIWorkflowLocalizedStringInputOption {
+        text {
+            value
+        }
+        value
+    }
+`,q=U()`
+    fragment UIWorkflowRadioGroupFormElement on UIWorkflowRadioGroupFormElement {
+        radioGroupValue
+        id
+        label {
+            value {
+                plainText
+            }
+        }
+        helpLink {
+            ...UIWorkflowHelpLink
+        }
+        radioGroupOptions {
+            ...UIWorkflowLocalizedStringInputOption
+        }
+        radioGroupConstraints {
+            isRequired {
+                value
+                feedback {
+                    title {
+                        ...UIWorkflowLocalizedMarkdown
+                    }
+                    message {
+                        ...UIWorkflowLocalizedMarkdown
+                    }
+                }
+            }
+        }
+        feedback {
+            __typename
+            ...UIWorkflowFeedbackDisplayElement
+        }
+    }
+    ${R}
+    ${D}
+`,N=U()`
+    fragment UIWorkflowSelectFormElement on UIWorkflowSelectFormElement {
+        selectValue
+        id
+        label {
+            value {
+                plainText
+            }
+        }
+        helpLink {
+            ...UIWorkflowHelpLink
+        }
+        selectOptions {
+            ...UIWorkflowLocalizedStringInputOption
+        }
+        selectConstraints {
+            isRequired {
+                value
+            }
+        }
+        feedback {
+            __typename
+            ...UIWorkflowFeedbackDisplayElement
+        }
+    }
+    ${R}
+    ${L}
+    ${D}
+`,V=U()`
+    fragment UIWorkflowMarkdownDisplayElement on UIWorkflowMarkdownDisplayElement {
+        id
+        markdown {
+            value {
+                plaidHtml
+            }
+        }
+    }
+`,P=U()`
+    fragment UIWorkflowContextHeader on UIWorkflowContextHeader {
+        heading {
+            value {
+                plainText
+            }
+        }
+        subject {
+            __typename
+            ... on Title {
+                titleType {
+                    id
+                }
+                titleText {
+                    text
+                }
+                primaryImage {
+                    id
+                    width
+                    height
+                    url
+                    caption {
+                        plainText
+                    }
+                }
+                releaseYear {
+                    year
+                }
+                runtime {
+                    displayableProperty {
+                        value {
+                            plainText
+                        }
+                    }
+                }
+                certificate {
+                    rating
+                }
+            }
+        }
+    }
+`,$=U()`
+    fragment UIWorkflowContentHeader on UIWorkflowContentHeader {
+        heading {
+            value {
+                plainText
+            }
+        }
+        helpLink {
+            ...UIWorkflowHelpLink
+        }
+    }
+`,G=U()`
+    fragment UIWorkflowBody on UIWorkflowBody {
+        elements {
+            __typename
+            ...UIWorkflowCheckboxFormElement
+            ...UIWorkflowTitleRatingElement
+            ...UIWorkflowTextFormElement
+            ...UIWorkflowTextAreaFormElement
+            ...UIWorkflowRadioGroupFormElement
+            ...UIWorkflowSelectFormElement
+            ...UIWorkflowMarkdownDisplayElement
+            ...UIWorkflowFeedbackDisplayElement
+        }
+    }
+    ${M}
+    ${O}
+    ${A}
+    ${F}
+    ${q}
+    ${N}
+    ${V}
+    ${R}
+`,H=U()`
+    fragment UIWorkflowActionTray on UIWorkflowActionTray {
+        actions {
+            id
+            type
+            label {
+                value
+            }
+            requiresFormData
+            navigationDirection
+        }
+    }
+`,z=U()`
+    fragment UIWorkflowState on UIWorkflowExecutionState {
+        status
+    }
+`,B=U()`
+    fragment UIWorkflow on UIWorkflow {
+        workflowType
+        workflowState {
+            ...UIWorkflowState
+        }
+        contextHeader {
+            ...UIWorkflowContextHeader
+        }
+        contentHeader {
+            ...UIWorkflowContentHeader
+        }
+        body {
+            ...UIWorkflowBody
+        }
+        actionTray {
+            ...UIWorkflowActionTray
+        }
+    }
+    ${z}
+    ${P}
+    ${$}
+    ${G}
+    ${H}
+`,Y=U()`
+    fragment StartUIWorkflowOutput on StartUIWorkflowOutput {
+        success
+        message {
+            value
+        }
+        workflow {
+            ...UIWorkflow
+        }
+    }
+    ${B}
+`,J=U()`
+    mutation StartUIWorkflow($actionContext: ID!) {
+        startUIWorkflow(input: { callToActionInputToken: $actionContext }) {
+            ...StartUIWorkflowOutput
+        }
+    }
+
+    ${Y}
+`,K=U()`
+    fragment UpdateUIWorkflowOutput on UpdateUIWorkflowOutput {
+        success
+        message {
+            value
+        }
+        workflow {
+            ...UIWorkflow
+        }
+    }
+    ${B}
+`,Q=U()`
+    mutation UpdateUIWorkflow(
+        $actionContext: ID!
+        $data: [UIWorkflowFormElementValues!]
+    ) {
+        updateUIWorkflow(input: { actionId: $actionContext, data: $data }) {
+            ...UpdateUIWorkflowOutput
+        }
+    }
+
+    ${K}
+`,Z=U()`
+    fragment GetLatestUIWorkflowOutput on GetLatestUIWorkflowOutput {
+        workflow {
+            ...UIWorkflow
+        }
+    }
+    ${B}
+`,X=U()`
+    query GetLatestUIWorkflow($executionId: ID!) {
+        getLatestUIWorkflow(input: { executionId: $executionId }) {
+            ...GetLatestUIWorkflowOutput
+        }
+    }
+
+    ${Z}
+`;var ee=r(82578);let et=e=>{let{actionContext:t}=e,{addOrUpdateItemInDebugBar:r}=(0,E.WW)(),{context:a}=(0,i.B)(),[s,c]=(0,o.useState)(void 0),[u,f]=(0,o.useState)(void 0),[p,h]=(0,o.useState)(void 0),[m,w]=(0,o.useState)(!1),[x,b]=(0,o.useState)(!1),[k,y]=(0,d.Z)(J),[I,v]=(0,d.Z)(Q),{result:T,getLatestUIWorkflowQuery:W}=er(),U=e=>{c(void 0),h(e),(0,ee.qs)(a,e)},L=e=>{if(e)c((0,ee.o2)(e));else throw Error("Workflow was undefined")},S=e=>{if(e?.graphQLErrors.every(e=>e.extensions?.code==="RESOURCE_NOT_FOUND")){w(!0),(0,l.cY)({metricName:n.NextClientMetrics.UI_WORKFLOW_ERROR_404,unit:n.Unit.COUNT,value:1,pageType:a.pageType,subPageType:a.subPageType,time:new Date().getTime()});return}if(e?.graphQLErrors.every(e=>e.extensions?.code==="FORBIDDEN")){b(!0),(0,l.cY)({metricName:n.NextClientMetrics.UI_WORKFLOW_ERROR_403,unit:n.Unit.COUNT,value:1,pageType:a.pageType,subPageType:a.subPageType,time:new Date().getTime()});return}(0,ee.qs)(a,e)};(0,o.useEffect)(()=>{A(t),r?.(C(A)),r?.(g(F))},[]),_({currentOperationType:u?.type,startUIWorkflowMutationResult:k,updateUIWorkflowMutationResult:I,getLatestUIWorkflowQueryResult:T}),(0,o.useEffect)(()=>{r?.({id:"ui-workflow-view-model",type:"any",title:"Parsed workflow view model",value:s})},[s]);let R=e=>{if(!e)throw Error("No data returned from mutation");if(!e.success)throw Error(e.message.value);if(!e.workflow)throw Error("No workflow returned from mutation");L(e.workflow)},A=(0,ee.GK)(e=>(f({type:j.o.START,actionId:e}),h(void 0),y({actionContext:e}).then(e=>{try{if(e.error){S(e.error);return}let t=e.data?.startUIWorkflow;R(t)}catch(e){U(e)}})),{metricName:n.NextClientMetrics.UI_WORKFLOW_START_OPERATION_TIME,requestContext:a}),F=(0,ee.GK)(e=>(f({type:j.o.GET_LATEST,actionId:""}),h(void 0),W(e).then(e=>{try{if(e.error){S(e.error);return}let t=e.data?.getLatestUIWorkflow;L(t?.workflow??null)}catch(e){U(e)}})),{metricName:n.NextClientMetrics.UI_WORKFLOW_GET_OPERATION_TIME,requestContext:a}),M=(0,ee.GK)((e,t)=>(f({type:j.o.UPDATE,actionId:e}),h(void 0),v({actionContext:e,data:t}).then(e=>{try{if(e.error){S(e.error);return}let t=e.data?.updateUIWorkflow;R(t)}catch(e){U(e)}})),{metricName:n.NextClientMetrics.UI_WORKFLOW_UPDATE_OPERATION_TIME,requestContext:a});return{result:{operationDetails:u,data:s,isFetching:k.fetching||I.fetching||T.fetching,error:k.error||I.error||T.error||p,notFoundError:m,forbiddenError:x},updateUIWorkflow:M,getLatestUIWorkflow:F}},er=()=>{let e=(0,s.x)(),[t,r]=(0,o.useState)({fetching:!1});return{result:t,getLatestUIWorkflowQuery:t=>(r({fetching:!0}),e.queryWithContext(X,{executionId:t},{personalized:!0,serverSideCacheable:!1}).toPromise().then(e=>(r({...e,fetching:!1}),e)))}},ea=o.createContext(void 0),eo=e=>{let{children:t,actionContext:r}=e,o=et({actionContext:r});return(0,a.jsx)(ea.Provider,{value:o,children:t})},en=()=>{let e=(0,o.useContext)(ea);if(!e)throw Error("useUIWorkflowEngineContext must be used within a UIWorkflowEngineProvider");return e}},90928:function(e,t,r){var a,o;r.d(t,{M:function(){return n},v:function(){return a}});let n="UIWorkflow";(o=a||(a={})).TERMINATED="terminated",o.AWAITING_INPUT="awaitingInput"},78481:function(e,t,r){var a,o;r.d(t,{o:function(){return a}}),(o=a||(a={})).START="start-ui-workflow",o.UPDATE="update-ui-workflow",o.GET_LATEST="get-latest-ui-workflow"},82578:function(e,t,r){r.d(t,{AJ:function(){return v},GK:function(){return y},RJ:function(){return w},X0:function(){return k},cF:function(){return I},o2:function(){return m},oc:function(){return b},qs:function(){return x}});var a=r(16189),o=r(3255),n=r.n(o),i=r(25436),l=r(13433),d=r(64180),s=r(90928);let c=e=>e&&"Title"===e.__typename?e.titleText?.text??"":"",u=e=>{let t=[];return e&&"Title"===e.__typename&&(e.certificate?.rating&&t.push(e.certificate.rating),e.releaseYear?.year&&t.push(e.releaseYear.year.toString()),e.runtime?.displayableProperty.value.plainText&&t.push(e.runtime.displayableProperty.value.plainText)),t},f=e=>e&&"Title"===e.__typename?{imageType:e.titleType?.id,imageModel:{url:e.primaryImage?.url??"",maxHeight:e.primaryImage?.height??0,maxWidth:e.primaryImage?.width??0,caption:e.primaryImage?.caption?.plainText??""}}:{imageType:"unknown"},p=e=>({subjectName:c(e.subject),subjectMetadataList:u(e.subject),heading:e.heading?.value.plainText??"",subjectImage:f(e.subject)}),h=e=>({heading:e.heading?.value.plainText??"",helpLink:e.helpLink?{label:e.helpLink.label.value,url:e.helpLink.url}:void 0}),m=e=>({workflowState:e.workflowState,contextHeader:p(e.contextHeader),contentHeader:h(e.contentHeader),body:g(e.body),actionTray:e.actionTray}),g=e=>{let t;let r=[],a={},o=(e,r)=>{!t&&b(r)&&(t=e)};return e.elements.forEach(e=>{switch(e.__typename){case"UIWorkflowCheckboxFormElement":a[e.id]=e.checkboxValue??null,r.push(e),o(e.id,e.feedback);break;case"UIWorkflowRadioGroupFormElement":a[e.id]=e.radioGroupValue??null,r.push(e),o(e.id,e.feedback);break;case"UIWorkflowSelectFormElement":a[e.id]=e.selectValue??null,r.push(e),o(e.id,e.feedback);break;case"UIWorkflowTextFormElement":a[e.id]=e.textValue??"",r.push(e),o(e.id,e.feedback);break;case"UIWorkflowTextAreaFormElement":a[e.id]=e.textAreaValue??"",r.push(e),o(e.id,e.feedback);break;case"UIWorkflowMarkdownDisplayElement":case"UIWorkflowFeedbackDisplayElement":case"UIWorkflowTitleRatingElement":r.push(e);break;default:throw Error(`Unknown element in graph response with typename - ${e.__typename}`)}}),{elements:r,formState:{initialFormElementValues:a,firstFormElementWithValidationErrorId:t}}},w=(e,t)=>{let r=t.reduce((e,t)=>({...e,[t.id]:t.__typename}),{});return Object.entries(e).filter(e=>{let[t]=e;return!!r[t]}).map(e=>{let[t,r]=e;return{id:t,values:(Array.isArray(r)?r:[r]).filter(e=>null!=e).map(e=>String(e))}})},x=(e,t,r)=>{(0,a.createLogger)(e)(s.M).error(t.message,t.stack,r),(0,d.cY)({metricName:i.NextClientMetrics.UI_WORKFLOW_ERROR,unit:i.Unit.COUNT,value:1,pageType:e.pageType,subPageType:e.subPageType,time:new Date().getTime()})},b=e=>{let t=!1;return e?.forEach(e=>{"UIWorkflowFeedbackDisplayElement"===e.__typename&&e.feedbackData.status===l.Ex.Error&&(t=!0)}),t},k=e=>{"_blank"!==e.target&&(e.target="_blank",e.rel="noopener noreferrer")};function y(e,t){return async function(){for(var r=arguments.length,a=Array(r),o=0;o<r;o++)a[o]=arguments[o];let n=Date.now(),l=await e(...a),s=Date.now();return(0,d.cY)({metricName:t.metricName,unit:i.Unit.MILLISECONDS,value:s-n,pageType:t.requestContext.pageType,subPageType:t.requestContext.subPageType,time:Date.now()}),l}}let I=e=>`ui-workflow-${e}-feedback`,v=(e,t)=>{let r=new(n()),a=r.countGraphemes(e);return!t||a<=t?e:r.splitGraphemes(e).slice(0,t).join("")}},23760:function(e,t,r){r.d(t,{WW:function(){return f},Xi:function(){return u}});var a=r(52322),o=r(2784),n=r(43672),i=r(8029),l=r(18364),d=r(54488),s=r(60251);let c=o.createContext({}),u=e=>{let{children:t}=e,r=(0,i.Zl)(),[u,f]=(0,o.useState)([]),p=e=>{f(t=>e.children?-1!==t.findIndex(t=>t.id===e.id)?t.map(t=>t.id===e.id?e:t):[...t,e]:t.filter(t=>t.id!==e.id))};return(0,a.jsx)(n.AU,{value:{cti:l.b},children:(0,a.jsx)(c.Provider,{value:r?{debugAccordionItems:u,addOrUpdateItemInDebugBar:e=>{let t;if(void 0===e.value||null===e.value){p({id:e.id,title:"",children:null});return}switch(e.type){case"error":t=(0,s.O3)(e);break;case"query":t=(0,s.yD)(e);break;case"react-node":t={id:e.id,title:e.title,preIconName:"channel",children:e.value};break;default:t={id:e.id,title:e.title,preIconName:"info",children:(0,a.jsx)(d.f$,{children:(0,a.jsx)(d.Jr,{children:(0,s.Pz)(e.value)})})}}p(t)}}:{},children:t})})},f=()=>o.useContext(c)},18364:function(e,t,r){r.d(t,{C:function(){return o},b:function(){return a}});let a={category:"IMDb",type:"GraphQL",item:"ContributionSDUI"},o={ADD_FAQ:{actionId:"start",target:{workflowId:"contribute__title__faq__add_faq"},ctaContext:{titleId:"tt2418644"}},ADD_USER_REVIEW:{actionId:"start",target:{workflowId:"contribute__title__user_review__add_user_review"},ctaContext:{titleId:"tt2418644"}},EDIT_FAQ:{actionId:"start",target:{workflowId:"contribute__title__faq__edit_faq"},ctaContext:{titleId:"tt2418644",faqId:"fq0089388"}},REPORT_FAQ:{actionId:"report",target:{workflowId:"contribute__title__faq__report_faq"},ctaContext:{titleId:"tt2418644",faqId:"fq0089388"}}}},54488:function(e,t,r){r.d(t,{Fg:function(){return i},Jr:function(){return l},dk:function(){return s},f$:function(){return n},lL:function(){return d}});var a=r(19596),o=r(91842);let n=a.default.pre.withConfig({componentId:"sc-2b5dd34d-0"})(["white-space:pre-wrap;display:flex;flex-direction:column;gap:",";padding:",";font-size:small;overflow-wrap:anywhere;"],o.spacing.xs,o.spacing.xs),i=a.default.pre.withConfig({componentId:"sc-2b5dd34d-1"})(["border:2px solid ",";color:",";white-space:pre-wrap;padding:",";"],(0,o.getColorVarValue)("ipt-on-base-accent3-color"),(0,o.getColorVarValue)("ipt-on-base-accent3-color"),o.spacing.xxs),l=a.default.div.withConfig({componentId:"sc-2b5dd34d-2"})(["border:2px solid ",";padding:",";"],(0,o.getColorVarValue)("ipt-on-base-accent1-color"),o.spacing.xs),d=a.default.div.withConfig({componentId:"sc-2b5dd34d-3"})(["",""],(0,o.setTypographyType)("headline6")),s=a.default.div.withConfig({componentId:"sc-2b5dd34d-4"})([""," color:",";"],(0,o.setTypographyType)("subtitle"),(0,o.getColorVarValue)("ipt-on-base-accent3-color"))},60251:function(e,t,r){r.d(t,{Lw:function(){return d},O3:function(){return c},Pz:function(){return s},Yh:function(){return l},yD:function(){return u}});var a=r(52322),o=r(83473);r(2784);var n=r(13382),i=r(54488);let l=e=>{if(!e)return"";try{return btoa(JSON.stringify(JSON.parse(e)))}catch{return""}},d=e=>{if(!e)return{};try{return JSON.parse(atob(e))}catch{return{}}},s=e=>JSON.stringify(e,null,4),c=e=>{let t=e.value instanceof n.C?"GraphQL Error":"Client Error",r="{}"===s(e.value)?"":s(e.value);return{id:e.id,title:(0,a.jsx)(i.dk,{children:e.title?e.title:t}),preIconName:"highlight-off",children:(0,a.jsxs)(i.f$,{children:[r&&(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(i.lL,{children:"Error"}),(0,a.jsx)(i.Fg,{children:r})]}),e.value?.stack&&(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(i.lL,{children:"Stack Trace"}),(0,a.jsx)(i.Fg,{children:e.value.stack})]})]})}},u=e=>({id:e.id,title:e.title,preIconName:"cardio",children:(0,a.jsxs)(i.f$,{children:[e.value?.error&&(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(i.dk,{children:"Errors"}),(0,a.jsx)(i.Fg,{children:s(e.value.error)})]}),e.value?.operation?.variables&&(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(i.lL,{children:"Variables"}),(0,a.jsx)(i.Jr,{children:s(e.value.operation.variables)})]}),e.value?.data&&(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(i.lL,{children:"Response"}),(0,a.jsx)(i.Jr,{children:s(e.value.data)})]}),e.value?.operation?.query&&(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(i.lL,{children:"Query"}),(0,a.jsx)(i.Jr,{children:(0,o.S)(e.value.operation.query)})]})]})})}}]);

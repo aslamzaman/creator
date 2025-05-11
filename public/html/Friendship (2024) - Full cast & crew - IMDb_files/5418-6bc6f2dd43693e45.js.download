@@ -1,0 +1,81 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[5418],{28072:function(t,e,a){a.d(e,{F4:function(){return o},sq:function(){return r},uN:function(){return l}});var i=a(30382),n=a.n(i);let r=n()`
+    fragment BaseTitleCard on Title {
+        id
+        titleText {
+            text
+        }
+        titleType {
+            id
+            text
+            canHaveEpisodes
+            displayableProperty {
+                value {
+                    plainText
+                }
+            }
+        }
+        originalTitleText {
+            text
+        }
+        primaryImage {
+            id
+            width
+            height
+            url
+            caption {
+                plainText
+            }
+        }
+        releaseYear {
+            year
+            endYear
+        }
+        ratingsSummary {
+            aggregateRating
+            voteCount
+        }
+        runtime {
+            seconds
+        }
+        certificate {
+            rating
+        }
+        canRate {
+            isRatable
+        }
+        titleGenres {
+            genres(limit: 3) {
+                genre {
+                    text
+                }
+            }
+        }
+        canHaveEpisodes
+    }
+`,o=n()`
+    fragment TitleCardTrailer on Title {
+        latestTrailer {
+            id
+        }
+    }
+`,l=n()`
+    fragment PersonalizedTitleCardUserRating on Title {
+        userRating @include(if: $includeUserRating) {
+            value
+        }
+    }
+`},11586:function(t,e,a){a.d(e,{Nf:function(){return R},z7:function(){return c}});var i=a(52322),n=a(86704),r=a(72779),o=a.n(r);a(2784);var l=a(79855),s=a(19596),d=a(45103),u=a(91842),g=a(44667),m=a(16983);let c={CONTAINER:"ratingGroup--container",IMDB_RATING:"ratingGroup--imdb-rating",OTHER_USER_RATING:"ratingGroup--other-user-rating",PLACEHOLDER:"ratingGroup--placeholder",USER_RATING:"ratingGroup--user-rating"},f="hide-vote-count",p="standalone-star",R=t=>{let{canRate:e,className:a,hideMaxIMDbRating:n,hideVoteCountOnSmallBreakpoints:r,otherUserRating:s,titleId:u,ratingsSummary:R,rateButtonLabel:b,showPlaceholderStarIfApplicable:T,titleText:x,refOverride:v}=t,N=(0,l.Z)(),{rating:I}=(0,d.useRatingsContext)(u)||{},P=(0,g.P)(I,"user"),L=(0,g.P)(R?.aggregateRating,"imdb"),C=(0,g.P)(s,"user"),M=N.formatMessage({id:"common_ariaLabels_IMDbRating",defaultMessage:"IMDb rating: {rating}"},{rating:L||""}),E=N.formatMessage({id:"common_ariaLabels_other_user_rating",defaultMessage:"User rating: {value}"},{value:s}),w=N.formatMessage({id:"common_ariaLabels_ratingButtonRated",defaultMessage:"Your rating: {rating}"},{rating:P||""}),$=N.formatMessage({id:"common_ariaLabels_ratingButtonUnrated",defaultMessage:"Rate {titleName}"},{titleName:x}),y=N.formatMessage({id:"common_ratingPrompt_rate",defaultMessage:"Rate"}),U=R?.voteCount?N.formatNumber(R?.voteCount,{notation:"compact",compactDisplay:"short"}):void 0,S=T&&!L&&!(e&&x);return(0,i.jsxs)(_,{className:a,"data-testid":c.CONTAINER,children:[L&&(0,i.jsx)(d.RatingStar,{"data-testid":c.IMDB_RATING,ariaLabel:M,className:c.IMDB_RATING,formattedRating:L,maxRating:n?void 0:10,formattedVoteCount:U,voteCountClassName:r?f:""}),s&&(0,i.jsx)(d.RatingStar,{ariaLabel:E,className:c.OTHER_USER_RATING,"data-testid":c.OTHER_USER_RATING,formattedRating:C,type:"otherUser"}),e&&x&&(0,i.jsx)(m.T,{title:{id:u,titleText:x,canRate:e},refOverride:v,ratingTriggerComponent:t=>{let{onUserRatingClick:e}=t;return(0,i.jsx)(h,{ariaLabelRated:w,ariaLabelUnrated:$,formattedRating:P,className:o()(c.USER_RATING,{[p]:!L}),onClick:e,rateLabel:"string"==typeof b?b:y})}}),S&&(0,i.jsx)(d.RatingStar,{"data-testid":c.PLACEHOLDER,"aria-hidden":!0,className:o()(c.PLACEHOLDER,p),type:"placeholder"})]})},_=s.default.div.withConfig({componentId:"sc-bfa1b6a1-0"})(["align-items:center;display:inline-flex;flex-flow:row wrap;flex-direction:row;gap:0 ",";.","{padding:0;min-width:0;}.","{","{display:none;}}"],n.spacing.xs,p,f,u.mediaQueries.breakpoints.below.m),h=(0,s.default)(d.RateButton).withConfig({componentId:"sc-bfa1b6a1-1"})(["font-size:inherit;height:fit-content;padding:0;"])},16983:function(t,e,a){a.d(e,{T:function(){return R}});var i=a(52322),n=a(2784),r=a(45103),o=a(89363),l=a(28827),s=a(30816),d=a(52817),u=a(58605),g=a(72814),m=a(27261),c=a(98046),f=a(69635);let p=(0,a(24667).vU)({ratingButtonRatedAriaLabel:{id:"common_ariaLabels_ratingButtonRated",defaultMessage:"Your rating: {rating}"},ratingButtonUnratedAriaLabel:{id:"common_ariaLabels_ratingButtonUnrated",defaultMessage:"Rate {titleName}"},ratingPromptHeaderLabel:{id:"common_ratingPrompt_header",defaultMessage:"Rate this"},ratingPromptRateLabel:{id:"common_ratingPrompt_rate",defaultMessage:"Rate"},ratingPromptRemoveRatingLabel:{id:"common_ratingPrompt_removeRating",defaultMessage:"Remove rating"},ratingPromptErrorLabel:{id:"common_ratingPrompt_error",defaultMessage:"Can't rate title. Try again later."},ratingPromptAriaLabelPrefix:{id:"common_ratingPrompt_ariaLabelPrefix",defaultMessage:"Rating"}}),R=t=>{let{title:{id:e,titleText:a,canRate:R},ratingTriggerComponent:_,refOverride:h}=t,[b,T]=(0,n.useState)(!1),x=(0,d.n)(),{makeRefMarker:v}=(0,g.Lz)(),{rating:N,updateRating:I,deleteRating:P}=(0,r.useRatingsContext)(e)||{},L=(0,u.F)((0,u.y)()),C=v(h?[(0,g.Qk)({refStr:h,explanation:"Not all usages of RatingPrompt have been converted to link builders."}),g.Cd.RATING]:g.Cd.RATING),{updateTitleRating:M,deleteTitleRating:E,tempRateUpdateLogRef:w}=(0,s.vY)({titleId:e,refTag:C,currentRating:N}),$=(0,l.N)(p.ratingPromptHeaderLabel),y=(0,l.N)(p.ratingPromptRateLabel),U=(0,l.N)(p.ratingPromptRemoveRatingLabel),S=(0,l.N)(p.ratingPromptAriaLabelPrefix);return(0,i.jsxs)(i.Fragment,{children:[_({onUserRatingClick:()=>{R&&((0,m.ar)(L,c.QJ.USER_RATING_PROMPT_OPEN,c.qB.POP_UP,C),T(!0))}}),R&&(0,i.jsx)(r.RatingPrompt,{isOpen:b,tconst:e,title:a,headerLabel:$,rateLabel:y,ariaLabelPrefix:S,shouldUseNewRatingFlow:!0,secondaryButtonText:U,secondaryButtonType:o.uu.RemoveRating,onPrimaryButtonClicked:async(t,e)=>{if(!t){T(!1);return}x?(T(!1),I?.(t,C,()=>M(t,e))):(await w(t,e),(0,f.O)(t,e,C,L))},onSecondaryButtonClicked:async(t,e)=>{T(!1),P?.(C,()=>E(e))},onCloseClicked:()=>{T(!1)}})]})}},33444:function(t,e,a){a.d(e,{f:function(){return s}});var i=a(52322);a(2784);var n=a(19596),r=a(45103),o=a(59459),l=a(28827);let s=t=>{let{titleId:e,watchlistMetricsContext:a}=t,n=(0,l.N)({id:"common_buttons_watchlist",defaultMessage:"Watchlist"}),s=(0,l.N)({id:"common_ariaLabel_loading",defaultMessage:"Loading"});return(0,i.jsx)(o.WatchlistConsumer,{id:e,metricsContext:a,render:t=>{let{inWatchlist:e,isLoading:a,onClick:o}=t,l=(0,i.jsx)(r.SecondaryButton,{onClick:o,preIcon:e?"done":"add",width:"full-width",children:n});return a&&(l=(0,i.jsx)(r.SecondaryButton,{onClick:o,width:"full-width",ariaLabel:s,children:(0,i.jsx)(d,{"data-testid":"watchlist-button-loader",type:"circle"})})),l}})},d=(0,n.default)(r.Loader).withConfig({componentId:"sc-446f4d16-0"})(["max-height:30px;max-width:30px;vertical-align:middle;"]);e.Z=s},10304:function(t,e,a){a.d(e,{Q:function(){return o}});var i=a(52322);a(2784);var n=a(45103),r=a(59459);let o=t=>{let{titleId:e,watchlistMetricsContext:a,onPoster:o,onImage:l=!0,size:s,className:d}=t;return(0,i.jsx)(r.WatchlistConsumer,{id:e,metricsContext:a,render:t=>o?(0,i.jsx)(n.Poster.WatchlistRibbon,{...t,className:d,size:s,"data-testid":`poster-watchlist-ribbon-${t.inWatchlist?"remove":"add"}`}):(0,i.jsx)(n.WatchlistRibbon,{...t,className:d,onImage:l,size:s,"data-testid":`watchlist-ribbon-${t.inWatchlist?"remove":"add"}`})})};e.Z=o},44667:function(t,e,a){a.d(e,{P:function(){return r}});var i=a(79855);let n={default:{maximumFractionDigits:1,minimumFractionDigits:1},imdb:{maximumFractionDigits:1,minimumFractionDigits:1},user:{maximumFractionDigits:0,minimumFractionDigits:0}},r=function(t){let e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"default",a=arguments.length>2?arguments[2]:void 0,r=(0,i.Z)();if(!t)return"";if(10===t)return"10";let o="user"===e?Math.trunc(t):Number(t.toFixed(1)),l=a??n[e];return r.formatNumber(o,l)}},38270:function(t,e,a){var i,n;function r(t){let e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"default";if(t<=0)return"hours_minutes_explicit"===e?"0min":"hours_minutes_explicit_short"===e?"0m":"iso_8601"===e?"PT0S":"0:00";let a=Math.floor(t/3600),i=Math.floor(t%3600/60),n=Math.floor(t%60);if("hours_minutes_explicit"===e||"hours_minutes_explicit_short"===e)return(t<60&&t>0&&(i=1),a>0&&i<=0)?`${a}h`:`${a>0?a+"h "+i:i}${"hours_minutes_explicit_short"===e?"m":"min"}`;if("iso_8601"!==e)return`${a>0?a+":"+o(i):i}:${o(n)}`;{let t=a?`${a}H`:"",e=i?`${i}M`:"",r=n?`${n}S`:"";return`PT${t}${e}${r}`}}function o(t){return t<=0||!Number.isInteger(t)?"00":t>9?`${t}`:`0${t}`}a.d(e,{A:function(){return i},L:function(){return r}}),(n=i||(i={})).DEFAULT="default",n.HOURS_MINUTES_EXPLICIT="hours_minutes_explicit",n.HOURS_MINUTES_EXPLICIT_SHORT="hours_minutes_explicit_short",n.ISO_8601="iso_8601"},30816:function(t,e,a){a.d(e,{vY:function(){return m}});var i=a(30382),n=a.n(i),r=a(85701),o=a(27261),l=a(78270),s=a(25673),d=a(29609);let u=n()`
+    mutation UpdateTitleRating($rating: Int!, $titleId: ID!) {
+        rateTitle(input: { rating: $rating, titleId: $titleId }) {
+            rating {
+                value
+            }
+        }
+    }
+`,g=n()`
+    mutation DeleteTitleRating($titleId: ID!) {
+        deleteTitleRating(input: { titleId: $titleId }) {
+            date
+        }
+    }
+`,m=t=>{let[,e]=(0,d.Z)(u),[,a]=(0,d.Z)(g),i=(0,o.EO)(),n=(0,s.hg)({weblabID:l.lh.IMDB_NEXT_WATCHED_FEATURE_1045775,treatments:{T1:!0}})??!1,{addToWatchedTitles:m}=(0,r.V)(),c=e=>{i({refMarkerString:t.refTag,pageAction:e,customPageMetadata:{id:t.titleId}})};return{updateTitleRating:(t,a)=>(c(`rating-add-${a}-${t}`),n&&m(a),e({rating:t,titleId:a})),deleteTitleRating:t=>(c(`rating-del-${t}`),a({titleId:t})),tempRateUpdateLogRef:async(t,e)=>{c(`tmp-rating-add-${e}-${t}`)}}}},87961:function(t,e,a){a.d(e,{S:function(){return n}});var i=a(19596);let n=t=>(0,i.css)(["@supports (-webkit-line-clamp:","){display:-webkit-box;-webkit-line-clamp:",";-webkit-box-orient:vertical;overflow:hidden;}"],t,t)}}]);
