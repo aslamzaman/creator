@@ -66,20 +66,6 @@ export const GET = async (Request) => {
         const url = "https://www.imdb.com/calendar/?region=US&type=MOVIE&ref_=rlm";
         const res = await getData(url);
 
-        /*
-        
-                let res;
-                if (isFromValue && isToValue && isValue) {
-                    const url = `https://www.xe.com/currencyconverter/convert/?Amount=${parseFloat(value)}&From=${f}&To=${t}`;
-                    res = await getData(url);
-                    if (!res) throw new Error('Failed to fetch conversion data');
-                } else {
-                    res = { message: "Invalid parameters provided" };
-                    return NextResponse.json(res, { status: 400 });
-                }
-        
-        
-        */
         return NextResponse.json(res, {
             headers: {
                 'Access-Control-Allow-Origin': '*',
