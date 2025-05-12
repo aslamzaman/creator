@@ -5,14 +5,15 @@ import { fetchHtmlPage } from '@/lib/fetchHtmlPage';
 
 const getList = async () => {
     try {
-        const url = "https://www.imdb.com/chart/moviemeter/?ref_=nv_mv_mpm";
-       // const url = "http://localhost:3000/html/popular.html";
+        //  const url = "https://www.imdb.com/chart/moviemeter/?ref_=nv_mv_mpm";
+        const url = "http://localhost:3000/html/popular.html";
         const htmlText = await fetchHtmlPage(url);
         const $ = cheerio.load(htmlText);
-        $.html();
+
         const liBlock = $('body > ul > li');
         if (liBlock.length === 0) return null;
-        const data = $(liBlock).find('a');
+
+        const data = liBlock.find('a');
         if (data.length === 0) return null;
 
         const res = data.map((i, item) => {
@@ -21,13 +22,11 @@ const getList = async () => {
             if (x.length === 0) return null
             const title = $(x).eq(0).text().trim();
             const url = "https://www.imdb.com" + $(item).attr("href");
-            console.log(i)
-
 
             return { title, url };
         }).get();
 
-        console.log(res);
+        //   console.log(res);
 
 
         return res;
@@ -41,7 +40,7 @@ const getList = async () => {
 
 
 
-const getData = async (url, dt) => {
+const getData = async (url) => {
     try {
         const htmlText = await fetchHtmlPage(url);
         const $ = cheerio.load(htmlText);
@@ -53,7 +52,6 @@ const getData = async (url, dt) => {
         const posterArr = $('div[data-testid=hero-media__poster] > div > img');
         const poster = posterArr.length > 0 ? $(posterArr).eq(0).attr('src') : "";
 
-        const release = dt;
 
         const ratingArr = $('div[data-testid=hero-rating-bar__aggregate-rating__score]');
         const rating = ratingArr.length > 0 ? $(ratingArr).eq(0).text().trim() : "";
@@ -108,7 +106,7 @@ const getData = async (url, dt) => {
         const cast = castsFnc();
 
 
-        return { url, title, poster, release, rating, length, description, category, directors, writers, cast };
+        return { url, title, poster, rating, length, description, category, directors, writers, cast };
     } catch (err) {
         console.error(err);
     }
@@ -124,19 +122,18 @@ export const GET = async (Request) => {
         const list = await getList();
         //  console.log(list.length)
 
-        /*
-                const result = [];
-                for (let i = 0; i < list.length; i++) {
-                    const url = list[i].url;
-                    const dt = list[i].releaseDate;
-                    const res = await getData(url, dt);
-                    result.push(res);
-                    console.log(`${i + 1} / ${list.length}`);
-                }
-        
-        */
 
-        return NextResponse.json(list, {
+        const result = [];
+        for (let i = 0; i < list.length; i++) {
+            const url = list[i].url;
+            const res = await getData(url);
+            result.push(res);
+            console.log(`${i + 1} / ${list.length}`);
+        }
+
+
+
+        return NextResponse.json(result, {
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'GET, OPTIONS',
