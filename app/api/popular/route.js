@@ -5,46 +5,32 @@ import { fetchHtmlPage } from '@/lib/fetchHtmlPage';
 
 const getList = async () => {
     try {
-        const url = "https://www.imdb.com/calendar/?region=IN&type=MOVIE&ref_=rlm";
+        const url = "https://www.imdb.com/chart/moviemeter/?ref_=nv_mv_mpm";
+       // const url = "http://localhost:3000/html/popular.html";
         const htmlText = await fetchHtmlPage(url);
         const $ = cheerio.load(htmlText);
+        $.html();
+        const liBlock = $('body > ul > li');
+        if (liBlock.length === 0) return null;
+        const data = $(liBlock).find('a');
+        if (data.length === 0) return null;
 
-        const articleBlock = $('article[data-testid=calendar-section]');
-        //  console.log(articleBlock.length);
+        const res = data.map((i, item) => {
+            const x = $(item).find('h3');
 
-        const data = articleBlock.map((i, item) => {
-            const releaseDateDiv = $(item).find('div[data-testid=release-date]');
-            const releaseDate = releaseDateDiv.length > 0 ? $(releaseDateDiv).eq(0).text().trim() : null;
+            if (x.length === 0) return null
+            const title = $(x).eq(0).text().trim();
+            const url = "https://www.imdb.com" + $(item).attr("href");
+            console.log(i)
 
-            //------------------------------------
-            const getLi = $(item).find('ul > li');
-            if (getLi.length === 0) return null;
 
-            const getDv = getLi.map((i, item) => {
-                if (item.length === 0) return null;
-                const imgSelector = $(item).find('div:nth-child(1) > div > img');
-                if (imgSelector.length === 0) return null;
-                const img = $(imgSelector).eq(0).attr('src');
-
-                const titleSelector = $(item).find('div:nth-child(2) > div > a');
-                if (titleSelector.length === 0) return null;
-                const title = $(titleSelector).eq(0).text().trim();
-                const url = "https://www.imdb.com" + $(titleSelector).eq(0).attr('href');
-                return {
-                    releaseDate,
-                    img,
-                    title,
-                    url
-                }
-
-            }).get();
-            //------------------------------------
-            return getDv;
-
+            return { title, url };
         }).get();
 
+        console.log(res);
 
-        return data;
+
+        return res;
 
     } catch (err) {
         console.error(err);
@@ -136,21 +122,21 @@ export const GET = async (Request) => {
     try {
 
         const list = await getList();
-        console.log(list.length)
+        //  console.log(list.length)
 
+        /*
+                const result = [];
+                for (let i = 0; i < list.length; i++) {
+                    const url = list[i].url;
+                    const dt = list[i].releaseDate;
+                    const res = await getData(url, dt);
+                    result.push(res);
+                    console.log(`${i + 1} / ${list.length}`);
+                }
+        
+        */
 
-        const result = [];
-        for (let i = 0; i < list.length; i++) {
-            const url = list[i].url;
-            const dt = list[i].releaseDate;
-            const res = await getData(url, dt);
-            result.push(res);
-            console.log(`${i + 1} / ${list.length}`);
-        }
-
-
-
-        return NextResponse.json(result, {
+        return NextResponse.json(list, {
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'GET, OPTIONS',
