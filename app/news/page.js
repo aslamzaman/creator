@@ -70,13 +70,14 @@ const News = () => {
                                 <tr className="border-b border-gray-200 hover:bg-gray-100" key={news.id}>
                                     <td className="text-center py-1 px-4">
                                         <div>
-                                            <Image src={news.poster} alt="Poster" width={200} height={200} priority className="w-[150px] h-[100px]" />
+                                         <img src={news.poster} alt="poster" className="w-[150px] h-[100px]" />
                                         </div>
                                     </td>
                                     <td className="text-start py-1 px-4">
                                         <Link href={news.url} target="_blank"><span className="font-bold">{news.sl}. {news.title}</span></Link><br />
                                         <span className="text-xs">{news.url}</span> <br />
                                         <span className="text-xs">{news.poster}</span><br />
+                                        <span className="text-xs text-gray-400">{news.detail}</span><br />
                                         {news.date} - {news.ref}
                                     </td>
                                     <td className="text-center py-2">

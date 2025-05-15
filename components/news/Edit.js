@@ -10,6 +10,7 @@ const Edit = ({ message, id, data }) => {
     const [title, setTitle] = useState('');
     const [url, setUrl] = useState('');
     const [poster, setPoster] = useState('');
+    const [detail, setDetail] = useState('');
     const [ref, setRef] = useState('');
     const [date, setDate] = useState('');
     const [createdAt, setCreatedAt] = useState('');
@@ -18,14 +19,15 @@ const Edit = ({ message, id, data }) => {
     const [busy, setBusy] = useState(false);
 
     const showEditForm = () => {
-           setShow(true);
-            const {title, url, poster, ref, date, createdAt} = data;
-            setTitle(title);
-            setUrl(url);
-            setPoster(poster);
-            setRef(ref);
-            setDate(formatedDate(date));
-            setCreatedAt(createdAt);
+        setShow(true);
+        const { title, url, poster, detail, ref, date, createdAt } = data;
+        setTitle(title);
+        setUrl(url);
+        setPoster(poster);
+        setDetail(detail);
+        setRef(ref);
+        setDate(formatedDate(date));
+        setCreatedAt(createdAt);
     };
 
 
@@ -36,12 +38,13 @@ const Edit = ({ message, id, data }) => {
 
     const createObject = () => {
         return {
-              title: title,
-              url: url,
-              poster: poster,
-              ref: ref,
-              date: date,
-              createdAt: createdAt
+            title: title,
+            url: url,
+            poster: poster,
+            detail: detail,
+            ref: ref,
+            date: date,
+            createdAt: createdAt
         }
     }
 
@@ -51,7 +54,7 @@ const Edit = ({ message, id, data }) => {
         try {
             setBusy(true);
             const newObject = createObject();
-            const msg = await updateDataToFirebase("news",id, newObject);
+            const msg = await updateDataToFirebase("news", id, newObject);
             message(msg);
         } catch (error) {
             console.error("Error saving news data:", error);
@@ -84,8 +87,9 @@ const Edit = ({ message, id, data }) => {
                                     <TextEn Title="Title" Id="title" Change={e => setTitle(e.target.value)} Value={title} Chr={250} />
                                     <TextEn Title="Url" Id="url" Change={e => setUrl(e.target.value)} Value={url} Chr={250} />
                                     <TextEn Title="Poster" Id="poster" Change={e => setPoster(e.target.value)} Value={poster} Chr={250} />
+                                    <TextEn Title="Detail" Id="detail" Change={e => setDetail(e.target.value)} Value={detail} Chr={122} />
                                     <TextEn Title="Ref" Id="ref" Change={e => setRef(e.target.value)} Value={ref} Chr={250} />
-                                    <TextDt Title="Date" Id="date" Change={e => setDate(e.target.value)} Value={date} />                                    
+                                    <TextDt Title="Date" Id="date" Change={e => setDate(e.target.value)} Value={date} />
                                 </div>
                                 <div className="w-full mt-4 flex justify-start pointer-events-auto">
                                     <input type="button" onClick={closeEditForm} value="Close" className="bg-pink-600 hover:bg-pink-800 text-white text-center mt-3 mx-0.5 px-4 py-2 font-semibold rounded-md focus:ring-1 ring-blue-200 ring-offset-2 duration-300 cursor-pointer" />
@@ -111,4 +115,3 @@ export default Edit;
 
 
 
-    
