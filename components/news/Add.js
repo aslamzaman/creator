@@ -1,19 +1,34 @@
 import React, { useState } from "react";
-import { TextEn, BtnSubmit, TextDt } from "@/components/Form";
-import { addDataToFirebase } from "@/lib/firebaseFunction";
-import LoadingDot from "../LoadingDot";
+import { BtnSubmit, DropdownEn, TextEn } from "@/components/Form";
+import { addDataToIndexedDB } from "@/lib/DatabaseIndexedDB";
 import { formatedDate } from "@/lib/utils";
+
+function getMainDomain(url) {
+    const hostname = new URL(url).hostname;
+    const parts = hostname.split('.');
+    if (parts.length <= 2) return hostname;
+    return parts.slice(-2).join('.');
+}
+
+
 
 const Add = ({ message }) => {
     const [title, setTitle] = useState('');
     const [url, setUrl] = useState('');
     const [poster, setPoster] = useState('');
     const [detail, setDetail] = useState('');
-    const [ref, setRef] = useState('');
-    const [date, setDate] = useState('');
-
+    const [cat, setCat] = useState('');
     const [show, setShow] = useState(false);
-    const [busy, setBusy] = useState(false);
+
+
+    const resetVariables = () => {
+        setTitle('');
+        setUrl('');
+        setPoster('');
+        setDetail('');
+        setCat('');
+    }
+
 
     const showAddForm = () => {
         setShow(true);
@@ -26,24 +41,16 @@ const Add = ({ message }) => {
     }
 
 
-    const resetVariables = () => {
-        setTitle('');
-        setUrl('');
-        setPoster('');
-        setDetail('');
-        setRef('');
-        setDate(formatedDate(new Date()));
-    }
-
-
     const createObject = () => {
         return {
+            id: Date.now(),
             title: title,
             url: url,
             poster: poster,
-            detail: detail + "...",
-            ref: ref,
-            date: date,
+            detail: detail,
+            ref: getMainDomain(url),
+            dt: formatedDate(new Date()),
+            cat: cat,
             createdAt: new Date().toISOString()
         }
     }
@@ -52,15 +59,13 @@ const Add = ({ message }) => {
     const saveHandler = async (e) => {
         e.preventDefault();
         try {
-            setBusy(true);
             const newObject = createObject();
-            const msg = await addDataToFirebase("news", newObject);
+            const msg = await addDataToIndexedDB('news', newObject);
             message(msg);
         } catch (error) {
             console.error("Error saving news data:", error);
             message("Error saving news data.");
         } finally {
-            setBusy(false);
             setShow(false);
         }
     }
@@ -68,11 +73,10 @@ const Add = ({ message }) => {
 
     return (
         <>
-            {busy ? <LoadingDot message="Please wait" /> : null}
             {show && (
-                <div className="fixed left-0 top-[60px] right-0 bottom-0 p-4 bg-gray-500/50 z-10 overflow-auto">
-                    <div className="w-full sm:w-11/12 md:w-9/12 lg:w-7/12 xl:w-1/2 mx-auto my-10 bg-white border-2 border-gray-300 rounded-md shadow-md duration-500">
-                        <div className="px-4 md:px-6 py-4 flex justify-between items-center border-b border-gray-300 rounded-t-md">
+                <div className="fixed inset-0 px-2 py-16 bg-gray-500/50 z-10 overflow-auto">
+                    <div className="w-full md:w-[500px] lg:w-[800px] mx-auto mb-10 bg-white border-2 border-gray-300 rounded-md shadow-md duration-300">
+                        <div className="px-6 md:px-6 py-2 flex justify-between items-center border-b border-gray-300">
                             <h1 className="text-xl font-bold text-blue-600">Add New Data</h1>
                             <button onClick={closeAddForm} className="w-8 h-8 p-0.5 bg-gray-50 hover:bg-gray-300 rounded-md transition duration-500 cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-full h-full stroke-black">
@@ -80,25 +84,26 @@ const Add = ({ message }) => {
                                 </svg>
                             </button>
                         </div>
-                        <div className="p-4 pb-6 border-0 text-black">
-                            <div className="w-full overflow-auto">
-                                <div className="p-4">
-                                    <form onSubmit={saveHandler}>
-                                        <div className="grid grid-cols-1 gap-4">
-                                            <TextEn Title="Title" Id="title" Change={e => setTitle(e.target.value)} Value={title} Chr={250} />
-                                            <TextEn Title="Url" Id="url" Change={e => setUrl(e.target.value)} Value={url} Chr={250} />
-                                            <TextEn Title="Poster" Id="poster" Change={e => setPoster(e.target.value)} Value={poster} Chr={250} />
-                                            <TextEn Title="Detail" Id="detail" Change={e => setDetail(e.target.value)} Value={detail} Chr={122} />
-                                            <TextEn Title="Ref" Id="ref" Change={e => setRef(e.target.value)} Value={ref} Chr={250} />
-                                            <TextDt Title="Date" Id="date" Change={e => setDate(e.target.value)} Value={date} />
-                                        </div>
-                                        <div className="w-full mt-4 flex justify-start pointer-events-auto">
-                                            <input type="button" onClick={closeAddForm} value="Close" className="bg-pink-600 hover:bg-pink-800 text-white text-center mt-3 mx-0.5 px-4 py-2 font-semibold rounded-md focus:ring-1 ring-blue-200 ring-offset-2 duration-300 cursor-pointer" />
-                                            <BtnSubmit Title="Save" Class="bg-blue-600 hover:bg-blue-800 text-white" />
-                                        </div>
-                                    </form>
+                        <div className="px-4 pb-6 text-black">
+                            <form onSubmit={saveHandler}>
+                                <div className="grid grid-cols-1 gap-4 my-4">
+                                    <TextEn Title="Title" Id="title" Change={e => setTitle(e.target.value)} Value={title} Chr={250} />
+                                    <TextEn Title="Url" Id="url" Change={e => setUrl(e.target.value)} Value={url} Chr={250} />
+                                    <TextEn Title="Poster" Id="poster" Change={e => setPoster(e.target.value)} Value={poster} Chr={250} />
+                                    <TextEn Title="Detail" Id="detail" Change={e => setDetail(e.target.value)} Value={detail} Chr={121} />
+                                    <DropdownEn Title="Category" Id="cat" Change={e => setCat(e.target.value)} Value={cat}>
+                                        <option value="politics">Politics</option>
+                                        <option value="business">Business</option>
+                                        <option value="entertainment">Entertainment</option>
+                                        <option value="sports">Sports</option>
+                                        <option value="science">Science</option>
+                                    </DropdownEn>
                                 </div>
-                            </div>
+                                <div className="w-full flex justify-start">
+                                    <input type="button" onClick={closeAddForm} value="Close" className="bg-pink-600 hover:bg-pink-800 text-white text-center mt-3 mx-0.5 px-4 py-2 font-semibold rounded-md focus:ring-1 ring-blue-200 ring-offset-2 duration-300 cursor-pointer" />
+                                    <BtnSubmit Title="Save" Class="bg-blue-600 hover:bg-blue-800 text-white" />
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

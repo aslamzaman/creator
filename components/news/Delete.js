@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import { BtnEn } from "@/components/Form";
-import { deleteDataFromFirebase } from "@/lib/firebaseFunction";
-import LoadingDot from "../LoadingDot";
-
+import { deleteDataFromIndexedDB } from "@/lib/DatabaseIndexedDB";
 
 const Delete = ({ message, id, data }) => {
     const [title, setTitle] = useState("");
-
     const [show, setShow] = useState(false);
-    const [busy, setBusy] = useState(false);
-
 
     const showDeleteForm = () => {
         setShow(true);
-        const {title} = data;
-        setTitle(title);
+        try {
+            const { title } = data;
+            setTitle(title);
+        }
+        catch (err) {
+            console.log(err);
+        }
     }
 
 
@@ -23,28 +23,23 @@ const Delete = ({ message, id, data }) => {
     }
 
 
-    const deleteClick = async () => {
+    const deleteYesClick =  async  () => {
         try {
-            setBusy(true);
-            const msg = await deleteDataFromFirebase('news', id);
+            const msg = await deleteDataFromIndexedDB('news', id);
             message(msg);
         } catch (error) {
             console.log(error);
             message("Data deleting error");
-        } finally {
-           setBusy(false);
-            setShow(false);
         }
+        setShow(false);
     }
-
 
 
     return (
         <>
-            {busy ? <LoadingDot message="Please wait" /> : null}
             {show && (
-                <div className="fixed left-0 top-[60px] right-0 bottom-0 p-4 bg-gray-500/50 z-10 overflow-auto">
-                    <div className="w-full sm:w-11/12 md:w-9/12 lg:w-7/12 xl:w-1/2 mx-auto my-10 bg-white border-2 border-gray-300 rounded-md shadow-md duration-500">
+                <div className="fixed inset-0 px-2 py-16 bg-gray-500/50 z-10 overflow-auto">
+                    <div className="w-full md:w-[500px] lg:w-[800px] mx-auto mb-10 bg-white border-2 border-gray-300 rounded-md shadow-md duration-300">
                         <div className="px-6 md:px-6 py-2 flex justify-between items-center border-b border-gray-300">
                             <h1 className="text-xl font-bold text-blue-600">Delete Existing Data</h1>
                             <button onClick={closeDeleteForm} className="w-8 h-8 p-0.5 bg-gray-50 hover:bg-gray-300 rounded-md transition duration-500 cursor-pointer">
@@ -66,9 +61,9 @@ const Delete = ({ message, id, data }) => {
                                     Are you sure to proceed with the deletion?</h1>
                                 <h1 className="text-center text-gray-600 font-bold">{title}</h1>
                             </div>
-                            <div className="w-full mt-4 flex justify-start pointer-events-auto">
+                            <div className="w-full flex justify-start">
                                 <BtnEn Title="Close" Click={closeDeleteForm} Class="bg-pink-700 hover:bg-pink-900 text-white mr-1" />
-                                <BtnEn Title="Yes Delete" Click={deleteClick} Class="bg-blue-600 hover:bg-blue-800 text-white" />
+                                <BtnEn Title="Yes Delete" Click={deleteYesClick} Class="bg-blue-600 hover:bg-blue-800 text-white" />
                             </div>
                         </div>
                     </div>
@@ -83,6 +78,4 @@ const Delete = ({ message, id, data }) => {
     )
 }
 export default Delete;
-    
-
-    
+  
