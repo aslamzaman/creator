@@ -43,7 +43,6 @@ const Add = ({ message }) => {
 
     const createObject = () => {
         return {
-            id: Date.now(),
             title: title,
             url: url,
             poster: poster,
@@ -60,8 +59,21 @@ const Add = ({ message }) => {
         e.preventDefault();
         try {
             const newObject = createObject();
-            const msg = await addDataToIndexedDB('news', newObject);
-            message(msg);
+            const apiUrl = "http://localhost:3000/api/redis";
+            const requestOptions = {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newObject)
+            };
+            const response = await fetch(apiUrl, requestOptions);
+            if (response.ok) {
+                console.log(response.message)
+                message(response.message);
+            } else {
+                throw new Error("Failed to create news");
+            }
+
+
         } catch (error) {
             console.error("Error saving news data:", error);
             message("Error saving news data.");

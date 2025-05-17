@@ -24,6 +24,19 @@ const News = () => {
         const load = async () => {
             setWaitMsg('Please Wait...');
             try {
+                const apiUrl = "http://localhost:3000/api/redis";
+                 const requestOptions = {method: "GET"};
+            const response = await fetch(apiUrl, requestOptions);
+            if (response.ok) {
+                const join = await response.json();
+                console.log(join.result);
+                setNewss(join.result);
+                
+            } else {
+                throw new Error("Failed to create news");
+            }
+
+                /*
                 const data = await getDataFromIndexedDB("news");
                 const result = data.sort((a, b) => parseInt(b.id) > parseInt(a.id) ? 1 : -1);
                 setNewss(result);
@@ -38,6 +51,7 @@ const News = () => {
                 }
                 console.log(cat);
                 setWaitMsg('');
+                */
             } catch (error) {
                 console.log(error);
             }

@@ -23,13 +23,22 @@ const Delete = ({ message, id, data }) => {
     }
 
 
-    const deleteYesClick =  async  () => {
+    const deleteYesClick = async () => {
         try {
-            const msg = await deleteDataFromIndexedDB('news', id);
-            message(msg);
+            const apiUrl = "http://localhost:3000/api/redis/rhDokLRMYRXiVOT3X4s8";
+            const requestOptions = { method: "DELETE" };
+            const response = await fetch(apiUrl, requestOptions);
+            if (response.ok) {
+                console.log(response.message);
+            } else {
+                throw new Error("Failed to delete customer");
+            }
+
+
+
         } catch (error) {
             console.log(error);
-            message("Data deleting error");
+          
         }
         setShow(false);
     }
@@ -78,4 +87,4 @@ const Delete = ({ message, id, data }) => {
     )
 }
 export default Delete;
-  
+

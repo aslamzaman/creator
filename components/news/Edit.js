@@ -41,7 +41,6 @@ const Edit = ({ message, id, data }) => {
 
     const createObject = () => {
         return {
-            id: id,
             title: title,
             url: url,
             poster: poster,
@@ -58,8 +57,21 @@ const Edit = ({ message, id, data }) => {
         e.preventDefault();
         try {
             const newObject = createObject();
-            const msg = await updateDataToIndexedDB('news', id, newObject);
-            message(msg);
+
+            const apiUrl = "http://localhost:3000/api/redis/rhDokLRMYRXiVOT3X4s8";
+            const requestOptions = {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newObject)
+            };
+
+            const response = await fetch(apiUrl, requestOptions);
+            if (response.ok) {
+                console.log(response.message)
+                message(response.message);
+            } else {
+                throw new Error("Failed to create customer");
+            }
         } catch (error) {
             console.error("Error updating news data:", error);
             message("Error updating news data.");
