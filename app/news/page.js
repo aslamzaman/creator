@@ -7,6 +7,8 @@ import Upload from "@/components/news/Upload";
 import { getDataFromIndexedDB, deleteKeyFromIndexedDB } from "@/lib/DatabaseIndexedDB";
 import Link from "next/link";
 
+
+
 const getCat = (data, category) => {
     const result = data.filter(item => item.cat === category);
     return result.length;
@@ -25,35 +27,20 @@ const News = () => {
             setWaitMsg('Please Wait...');
             try {
                 const apiUrl = "http://localhost:3000/api/redis";
-                 const requestOptions = {method: "GET"};
-            const response = await fetch(apiUrl, requestOptions);
-            if (response.ok) {
-                const join = await response.json();
-                console.log(join.result);
-                setNewss(join.result);
-                
-            } else {
-                throw new Error("Failed to create news");
-            }
+                const requestOptions = { method: "GET" };
+                const response = await fetch(apiUrl, requestOptions);
+                if (response.ok) {
+                    const join = await response.json();
+                    console.log(join.result);
+                    setNewss(join.result);
 
-                /*
-                const data = await getDataFromIndexedDB("news");
-                const result = data.sort((a, b) => parseInt(b.id) > parseInt(a.id) ? 1 : -1);
-                setNewss(result);
-                console.log(result);
-                //---------------------------
-                const cat = {
-                    politics: getCat(result, 'politics'),
-                    business: getCat(result, 'business'),
-                    entertainment: getCat(result, 'entertainment'),
-                    sports: getCat(result, 'sports'),
-                    science: getCat(result, 'science'),
+                } else {
+                    throw new Error("Failed to create news");
                 }
-                console.log(cat);
-                setWaitMsg('');
-                */
             } catch (error) {
                 console.log(error);
+            } finally {
+                setWaitMsg('');
             }
         };
         load();
@@ -76,6 +63,7 @@ const News = () => {
 
     return (
         <>
+
             <div className="w-full flex justify-end">
                 <Upload message={messageHandler} />
             </div>

@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { BtnSubmit, DropdownEn, TextEn } from "@/components/Form";
-import { addDataToIndexedDB } from "@/lib/DatabaseIndexedDB";
 import { formatedDate } from "@/lib/utils";
+import LoadingDot from "@/components/LoadingDot";
+
+
+
 
 function getMainDomain(url) {
     const hostname = new URL(url).hostname;
@@ -19,6 +22,8 @@ const Add = ({ message }) => {
     const [detail, setDetail] = useState('');
     const [cat, setCat] = useState('');
     const [show, setShow] = useState(false);
+
+    const [waitPage, setWaitPage] = useState(false);
 
 
     const resetVariables = () => {
@@ -57,7 +62,9 @@ const Add = ({ message }) => {
 
     const saveHandler = async (e) => {
         e.preventDefault();
+        setWaitPage(true);
         try {
+
             const newObject = createObject();
             const apiUrl = "http://localhost:3000/api/redis";
             const requestOptions = {
@@ -67,8 +74,9 @@ const Add = ({ message }) => {
             };
             const response = await fetch(apiUrl, requestOptions);
             if (response.ok) {
-                console.log(response.message)
-                message(response.message);
+                const json = await response.json();
+                console.log(json.message)
+                message(json.message);
             } else {
                 throw new Error("Failed to create news");
             }
@@ -79,12 +87,17 @@ const Add = ({ message }) => {
             message("Error saving news data.");
         } finally {
             setShow(false);
+            setWaitPage(false);
         }
     }
 
 
     return (
         <>
+            {waitPage ? (
+                <LoadingDot message={`Please wait ...`} />
+            ) : null}
+
             {show && (
                 <div className="fixed inset-0 px-2 py-16 bg-gray-500/50 z-10 overflow-auto">
                     <div className="w-full md:w-[500px] lg:w-[800px] mx-auto mb-10 bg-white border-2 border-gray-300 rounded-md shadow-md duration-300">

@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { BtnSubmit, TextDt, TextEn, DropdownEn } from "@/components/Form";
-import { updateDataToIndexedDB } from "@/lib/DatabaseIndexedDB";
 import { formatedDate } from "@/lib/utils";
+import LoadingDot from "@/components/LoadingDot";
+
+
+
 
 const Edit = ({ message, id, data }) => {
     const [title, setTitle] = useState('');
@@ -13,6 +16,10 @@ const Edit = ({ message, id, data }) => {
     const [cat, setCat] = useState('');
     const [createdAt, setCreatedAt] = useState('');
     const [show, setShow] = useState(false);
+
+
+    const [waitPage, setWaitPage] = useState(false);
+
 
 
     const showEditForm = () => {
@@ -55,10 +62,11 @@ const Edit = ({ message, id, data }) => {
 
     const updateHandler = async (e) => {
         e.preventDefault();
+        setWaitPage(true);
         try {
             const newObject = createObject();
 
-            const apiUrl = "http://localhost:3000/api/redis/rhDokLRMYRXiVOT3X4s8";
+            const apiUrl = "http://localhost:3000/api/redis/" + id;
             const requestOptions = {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
@@ -67,8 +75,9 @@ const Edit = ({ message, id, data }) => {
 
             const response = await fetch(apiUrl, requestOptions);
             if (response.ok) {
-                console.log(response.message)
-                message(response.message);
+                const json = await response.json();
+                console.log(json.message)
+                message(json.message);
             } else {
                 throw new Error("Failed to create customer");
             }
@@ -77,12 +86,16 @@ const Edit = ({ message, id, data }) => {
             message("Error updating news data.");
         } finally {
             setShow(false);
+            setWaitPage(false);
         }
     }
 
 
     return (
         <>
+            {waitPage ? (
+                <LoadingDot message={`Please wait ...`} />
+            ) : null}
             {show && (
                 <div className="fixed inset-0 px-2 py-16 bg-gray-500/50 z-10 overflow-auto">
                     <div className="w-full md:w-[500px] lg:w-[800px] mx-auto mb-10 bg-white border-2 border-gray-300 rounded-md shadow-md duration-300">
