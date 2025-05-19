@@ -36,7 +36,7 @@ export const GET = async (Request) => {
 export const POST = async (Request) => {
     try {
         const data = await Request.json();
-        const message = await addDataToFirestoreRedisServer("news", data, "news_api");
+        const message = await addDataToFirestoreRedisServer("news", data, "news_api", 20);
         return NextResponse.json({ message }, {
             headers: {
                 'Access-Control-Allow-Origin': '*',

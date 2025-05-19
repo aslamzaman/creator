@@ -3,16 +3,9 @@ import React, { useState, useEffect } from "react";
 import Add from "@/components/news/Add";
 import Edit from "@/components/news/Edit";
 import Delete from "@/components/news/Delete";
-import Upload from "@/components/news/Upload";
-import { getDataFromIndexedDB, deleteKeyFromIndexedDB } from "@/lib/DatabaseIndexedDB";
 import Link from "next/link";
 
 
-
-const getCat = (data, category) => {
-    const result = data.filter(item => item.cat === category);
-    return result.length;
-}
 
 
 
@@ -52,26 +45,10 @@ const News = () => {
     }
 
 
-    const deleteHandler = async () => {
-        const isDelete = confirm("Are you sure?");
-        if (!isDelete) return false;
-        await deleteKeyFromIndexedDB("news");
-        setMsg("Data deleted at " + Date.now());
-    }
-
 
 
     return (
         <>
-
-            <div className="w-full flex justify-end">
-                <Upload message={messageHandler} />
-            </div>
-
-            <div className="w-full flex justify-end">
-                <button onClick={deleteHandler} className="px-4 py-1.5 mr-6 mt-4 bg-blue-500 hover:bg-blue-700 text-white rounded-md transition duration-500 cursor-pointer">Delete All Data</button>
-            </div>
-
 
             <div className="w-full mb-3 mt-8">
                 <h1 className="w-full text-xl lg:text-3xl font-bold text-center text-blue-700">News</h1>
