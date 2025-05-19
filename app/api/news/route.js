@@ -5,7 +5,7 @@ import { getDataFromFirestoreRedisServer, addDataToFirestoreRedisServer } from '
 
 export const GET = async (Request) => {
     try {
-        const resultResponse = await getDataFromFirestoreRedisServer("news", "news_api");
+        const resultResponse = await getDataFromFirestoreRedisServer("news", "news_api",20);
 
         return NextResponse.json({result:resultResponse}, {
             headers: {
