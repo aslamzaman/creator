@@ -25,7 +25,7 @@ const Delete = ({ message, id, data }) => {
 
     const deleteYesClick = async () => {
         try {
-            const apiUrl = "http://localhost:3000/api/redis/rhDokLRMYRXiVOT3X4s8";
+            const apiUrl = "http://localhost:3000/api/news/" + id;
             const requestOptions = { method: "DELETE" };
             const response = await fetch(apiUrl, requestOptions);
             if (response.ok) {
@@ -38,7 +38,7 @@ const Delete = ({ message, id, data }) => {
 
         } catch (error) {
             console.log(error);
-          
+
         }
         setShow(false);
     }

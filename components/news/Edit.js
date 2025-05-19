@@ -66,7 +66,7 @@ const Edit = ({ message, id, data }) => {
         try {
             const newObject = createObject();
 
-            const apiUrl = "http://localhost:3000/api/redis/" + id;
+            const apiUrl = "http://localhost:3000/api/news/" + id;
             const requestOptions = {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },

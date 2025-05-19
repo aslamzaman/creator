@@ -19,7 +19,7 @@ const News = () => {
         const load = async () => {
             setWaitMsg('Please Wait...');
             try {
-                const apiUrl = "http://localhost:3000/api/redis";
+                const apiUrl = "http://localhost:3000/api/news";
                 const requestOptions = { method: "GET" };
                 const response = await fetch(apiUrl, requestOptions);
                 if (response.ok) {

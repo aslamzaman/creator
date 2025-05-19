@@ -66,7 +66,7 @@ const Add = ({ message }) => {
         try {
 
             const newObject = createObject();
-            const apiUrl = "http://localhost:3000/api/redis";
+            const apiUrl = "http://localhost:3000/api/news";
             const requestOptions = {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
