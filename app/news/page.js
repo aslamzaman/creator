@@ -19,13 +19,13 @@ const News = () => {
         const load = async () => {
             setWaitMsg('Please Wait...');
             try {
-                const apiUrl = "http://localhost:3000/api/news";
+                const apiUrl = "https://apipark.vercel.app/api/news";
                 const requestOptions = { method: "GET" };
                 const response = await fetch(apiUrl, requestOptions);
                 if (response.ok) {
                     const join = await response.json();
-                    console.log(join.result);
-                    setNewss(join.result);
+                    console.log(join);
+                    setNewss(join);
 
                 } else {
                     throw new Error("Failed to create news");

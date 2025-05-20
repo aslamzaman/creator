@@ -5,7 +5,7 @@ import { getDataFromFirestoreRedisServer, addDataToFirestoreRedisServer } from '
 
 export const GET = async (Request) => {
     try {
-        const resultResponse = await getDataFromFirestoreRedisServer("news", "news_api",20);
+        const resultResponse = await getDataFromFirestoreRedisServer("news", "news_api",10);
 
         return NextResponse.json({result:resultResponse}, {
             headers: {
@@ -36,7 +36,7 @@ export const GET = async (Request) => {
 export const POST = async (Request) => {
     try {
         const data = await Request.json();
-        const message = await addDataToFirestoreRedisServer("news", data, "news_api", 20);
+        const message = await addDataToFirestoreRedisServer("news", data, "news_api", 10);
         return NextResponse.json({ message }, {
             headers: {
                 'Access-Control-Allow-Origin': '*',
