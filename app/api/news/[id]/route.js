@@ -6,6 +6,7 @@ import { updateDataToFirestoreRedisServer, deleteDataFromFirestoreRedisServer } 
 export const PUT = async (Request, { params }) => {
     try {
         const { id } = await params;
+        console.log(id);
         const data = await Request.json();
         const message = await updateDataToFirestoreRedisServer("news", data, id, "news_api");
         return NextResponse.json({ message }, {

@@ -8,6 +8,7 @@ export const GET = async (Request) => {
         const resultResponse = await getDataFromFirestoreRedisServer("news", "news_api",10);
 
         console.log(resultResponse);
+        
         return NextResponse.json({result:resultResponse}, {
             headers: {
                 'Access-Control-Allow-Origin': '*',
