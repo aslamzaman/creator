@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { BtnEn } from "@/components/Form";
-import { deleteDataFromIndexedDB } from "@/lib/DatabaseIndexedDB";
+
+
+
 
 const Delete = ({ message, id, data }) => {
     const [title, setTitle] = useState("");

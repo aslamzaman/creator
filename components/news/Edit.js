@@ -6,7 +6,7 @@ import LoadingDot from "@/components/LoadingDot";
 
 
 
-const Edit = ({ message, id, data }) => {
+const Edit = ({ message, id }) => {
     const [title, setTitle] = useState('');
     const [url, setUrl] = useState('');
     const [poster, setPoster] = useState('');
@@ -22,19 +22,29 @@ const Edit = ({ message, id, data }) => {
 
 
 
-    const showEditForm = () => {
+    const showEditForm = async () => {
         message("Ready to edit");
         setShow(true);
         try {
-            const { title, url, poster, detail, ref, dt, cat, createdAt } = data;
-            setTitle(title);
-            setUrl(url);
-            setPoster(poster);
-            setDetail(detail);
-            setRef(ref);
-            setDt(formatedDate(dt));
-            setCat(cat);
-            setCreatedAt(createdAt);
+            const apiUrl = `${process.env.NEXT_PUBLIC_HOST_NAME}/api/news/${id}`;
+            const requestOptions = { method: "GET" };
+            const response = await fetch(apiUrl, requestOptions);
+            if (response.ok) {
+                const json = await response.json();
+                console.log(json)
+                const { title, url, poster, detail, ref, dt, cat, createdAt } = json;
+                setTitle(title);
+                setUrl(url);
+                setPoster(poster);
+                setDetail(detail);
+                setRef(ref);
+                setDt(formatedDate(dt));
+                setCat(cat);
+                setCreatedAt(createdAt);
+            } else {
+                throw new Error("Failed to create customer");
+            }
+
         } catch (err) {
             console.log(err);
         }
@@ -66,7 +76,7 @@ const Edit = ({ message, id, data }) => {
         try {
             const newObject = createObject();
 
-            const apiUrl = "http://localhost:3000/api/news/" + id;
+            const apiUrl = `${process.env.NEXT_PUBLIC_HOST_NAME}/api/news/${id}`;
             const requestOptions = {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },

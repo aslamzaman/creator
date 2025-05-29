@@ -21,17 +21,9 @@ export default function Home() {
 
 
 
-  const myFunction = async () => {
-
-
-  }
-
-
 
   return (
     <div className="p-6">
-      <button onClick={myFunction} className="px-4 py-1.5 text-white bg-blue-600 hover:bg-blue-800 focus:ring-2 ring-offset-2 ring-blue-400 rounded-md duration-300 cursor-pointer">Click Me</button>
-
 
       <div className="w-full p-4 grid grid-cols-5 gap-4">
         {datas.length ? datas.map((item, i) => {

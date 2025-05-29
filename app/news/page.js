@@ -4,6 +4,7 @@ import Add from "@/components/news/Add";
 import Edit from "@/components/news/Edit";
 import Delete from "@/components/news/Delete";
 import Link from "next/link";
+import { formatedDate } from "@/lib/utils";
 
 
 
@@ -19,13 +20,25 @@ const News = () => {
         const load = async () => {
             setWaitMsg('Please Wait...');
             try {
-                const apiUrl = "https://apipark.vercel.app/api/news";
+                 const apiUrl = "https://apipark.vercel.app/api/news";
+               // const apiUrl = `${process.env.NEXT_PUBLIC_HOST_NAME}/api/news`;
                 const requestOptions = { method: "GET" };
                 const response = await fetch(apiUrl, requestOptions);
                 if (response.ok) {
-                    const join = await response.json();
-                    console.log(join);
-                    setNewss(join);
+                    const data = await response.json();
+                    console.log(data.length)
+                    const todayData = data.filter(item => item.dt === formatedDate(new Date()));
+
+                    console.log(data);
+                    const politics = todayData.filter(item => item.cat === "politics").length;
+                    const business = todayData.filter(item => item.cat === "business").length;
+                    const science = todayData.filter(item => item.cat === "science").length;
+                    const sports = todayData.filter(item => item.cat === "sports").length;
+                    const entertainment = todayData.filter(item => item.cat === "entertainment").length;
+                    const displayMsg = `politics=${politics}, business=${business},science=${science}, sports=${sports}, entertainment=${entertainment}`;
+                    setMsg(displayMsg);
+
+                    setNewss(data);
 
                 } else {
                     throw new Error("Failed to create news");
