@@ -48,13 +48,13 @@ const Add = ({ message }) => {
 
     const createObject = () => {
         return {
-            title: title,
-            url: url,
-            poster: poster,
-            detail: detail,
+            title,
+            url,
+            poster,
+            detail,
             ref: getMainDomain(url),
             dt: formatedDate(new Date()),
-            cat: cat,
+            cat,
             createdAt: new Date().toISOString()
         }
     }
@@ -64,9 +64,8 @@ const Add = ({ message }) => {
         e.preventDefault();
         setWaitPage(true);
         try {
-
             const newObject = createObject();
-            const apiUrl = "http://localhost:3000/api/news";
+            const apiUrl = `${process.env.NEXT_PUBLIC_HOST_NAME}/api/news`;
             const requestOptions = {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
