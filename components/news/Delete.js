@@ -27,7 +27,8 @@ const Delete = ({ message, id, data }) => {
 
     const deleteYesClick = async () => {
         try {
-            const apiUrl = "http://localhost:3000/api/news/" + id;
+            const apiUrl = `${process.env.NEXT_PUBLIC_HOST_NAME}/api/news/${id}`;
+            //const apiUrl = "http://localhost:3000/api/news/" + id;
             const requestOptions = { method: "DELETE" };
             const response = await fetch(apiUrl, requestOptions);
             if (response.ok) {
